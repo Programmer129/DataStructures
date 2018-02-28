@@ -2,17 +2,15 @@ package tree;
 
 public class BinarySearchTree<Key extends Comparable<Key>,Value> {
 
-    private Node<Key,Value> root;
+    private Node root;
 
-    public BinarySearchTree(){
-        this.root = null;
-    }
+    public BinarySearchTree(){ }
 
     public void insert(Key key,Value value){
             this.root = insertRecursion(root, key, value);
     }
 
-    private Node insertRecursion(Node node,Key key,Value value){
+    private synchronized Node insertRecursion(Node node,Key key,Value value){
         if(node == null){
             node=new Node<>(key,value);
             return node;
@@ -23,25 +21,7 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> {
         if(node.getKey().compareTo(key) > 0){
              node.left = insertRecursion(node.left,key,value);
         }
-        int div = balanceValue(node.left,node.right);
-        if(div > 1){
-            if(height(node.left.left)>=height(node.left.right)){
-                node = rightRotate(node);
-            }
-            else{
-                node = leftRotate(node.left);
-                node = rightRotate(node);
-            }
-        }
-        if(div < -1){
-            if(height(node.right.right)>=height(node.right.left)){
-                node = leftRotate(node);
-            }
-            else{
-                node = rightRotate(node.left);
-                node = leftRotate(node);
-            }
-        }
+        node = rebalance(node);
         return node;
     }
 
@@ -66,54 +46,36 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> {
         return null;
     }
 
-    private void delete(Node root,Key key){
+    private synchronized Node delete(Node root,Key key){
+        if(root.getKey().compareTo(key) < 0){
+            root.right = delete(root.right,key);
+        }
+        if(root.getKey().compareTo(key)>0){
+            root.left = delete(root.left,key);
+        }
         if(root.getKey().equals(key)){
-            Node right = this.root.right;
-            Node left = this.root.left;
-            this.root.left = null;
-            this.root.right = null;
-            this.root = right;
-            min(this.root.right).left = left;
-            return;
-        }
-        if(root.left != null) {
-            if (root.left.getKey().equals(key)) {
-                Node left = root.left.left;
-                Node right = root.left.right;
-                root.left = null;
-                root.left = right;
-                if(root.left != null) {
-                    min(root.left).left = left;
-                }
-                return;
+            if(root.left == null && root.right == null){
+                root = null;
             }
-        }
-        if(root.right != null) {
-            if (root.right.getKey().equals(key)) {
-                Node left = root.right.left;
-                Node right = root.right.right;
-                root.right = null;
-                root.right = right;
-                if (root.right != null) {
-                    if (left != null) {
-                        min(root.right).left = left;
+            else if(root.left == null){
+                    root = root.right;
+                }
+                else if(root.right == null){
+                        root = root.left;
                     }
-                } else {
-                    root.right = left;
-                }
-                return;
-            }
+                    else{
+                        Node right = root.right;
+                        Node left = root.left;
+                        root = null;
+                        root = left;
+                        root.right = right;
+                    }
         }
-        if(root.getKey().compareTo(key) == -1){
-            delete(root.right,key);
-        }
-        if(root.getKey().compareTo(key) == 1){
-            delete(root.left,key);
-        }
+        return root;
     }
 
     public void delete(Key key){
-        delete(this.root,key);
+        this.root = delete(this.root,key);
     }
 
     public void print(){
@@ -164,7 +126,11 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> {
     }
 
     private Node leftRotate(Node node){
-        return null;
+        Node newRoot = node.right;
+        node.right = root.right.left;
+        newRoot.left = node;
+        newRoot.height = height(newRoot);
+        return newRoot;
     }
 
     private Node rightRotate(Node node){
@@ -173,6 +139,40 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> {
         newRoot.right = node;
         newRoot.height = height(newRoot);
         return newRoot;
+    }
+
+    private Node rebalance(Node node){
+        int div = balanceValue(node.left,node.right);
+        if(div > 1){
+            if(height(node.left.left)>=height(node.left.right)){
+                node = rightRotate(node);
+            }
+            else{
+                node = leftRotate(node.left);
+                node = rightRotate(node);
+            }
+        }
+        if(div < -1){
+            if(height(node.right.right)>=height(node.right.left)){
+                node = leftRotate(node);
+            }
+            else{
+                node = rightRotate(node.left);
+                node = leftRotate(node);
+            }
+        }
+        return node;
+    }
+
+    /**
+     * a and b must be leaves of three
+     * time complexity O(logn)
+     * @param a
+     * @param b
+     * @return lowest common ancestor
+     */
+    private Node lowestCommonAncestor(Node root,Node a,Node b){
+        return null;
     }
 
 }
