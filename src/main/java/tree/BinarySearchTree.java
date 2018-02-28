@@ -1,6 +1,6 @@
 package tree;
 
-public class BinarySearchTree<Key extends Comparable<Key>,Value> {
+public class BinarySearchTree<Key extends Comparable<Key>,Value> implements Tree<Key,Value> {
 
     private Node root;
 
@@ -10,22 +10,24 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> {
             this.root = insertRecursion(root, key, value);
     }
 
-    private synchronized Node insertRecursion(Node node,Key key,Value value){
+    @Override
+    @Deprecated
+    public synchronized Node insertRecursion(Node node, Key key, Value value) {
         if(node == null){
             node=new Node<>(key,value);
             return node;
         }
         if(node.getKey().compareTo(key) < 0){
-             node.right = insertRecursion(node.right,key,value);
+            node.right = insertRecursion(node.right,key,value);
         }
         if(node.getKey().compareTo(key) > 0){
-             node.left = insertRecursion(node.left,key,value);
+            node.left = insertRecursion(node.left,key,value);
         }
         node = rebalance(node);
         return node;
     }
 
-    private int balanceValue(Node left,Node right){
+    private int balanceValue(Node left, Node right){
         return height(left)-height(right);
     }
 
@@ -33,7 +35,9 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> {
         return search(root,key);
     }
 
-    private Node search(Node root,Key key){
+    @Override
+    @Deprecated
+    public synchronized Node search(Node node, Key key) {
         if(root.getKey().equals(key)){
             return root;
         }
@@ -46,7 +50,9 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> {
         return null;
     }
 
-    private synchronized Node delete(Node root,Key key){
+    @Override
+    @Deprecated
+    public synchronized Node delete(Node node, Key key) {
         if(root.getKey().compareTo(key) < 0){
             root.right = delete(root.right,key);
         }
@@ -58,18 +64,18 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> {
                 root = null;
             }
             else if(root.left == null){
-                    root = root.right;
-                }
-                else if(root.right == null){
-                        root = root.left;
-                    }
-                    else{
-                        Node right = root.right;
-                        Node left = root.left;
-                        root = null;
-                        root = left;
-                        root.right = right;
-                    }
+                root = root.right;
+            }
+            else if(root.right == null){
+                root = root.left;
+            }
+            else{
+                Node right = root.right;
+                Node left = root.left;
+                root = null;
+                root = left;
+                root.right = right;
+            }
         }
         return root;
     }
@@ -82,6 +88,7 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> {
         inorderTraversal(this.root);
     }
 
+    @Override
     public void inorderTraversal(Node root){
         if(root != null){
             inorderTraversal(root.left);
@@ -94,7 +101,8 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> {
         return height(root);
     }
 
-    private int height(Node root){
+    @Override
+    public int height(Node root){
         if(root == null){
             return -1;
         }

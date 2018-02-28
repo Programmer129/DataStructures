@@ -1,7 +1,5 @@
 package tree;
 
-import java.util.Comparator;
-
 public class Node<Key extends Comparable<Key>,Value> {
     private Value value;
     private Key key;
@@ -30,4 +28,5 @@ public class Node<Key extends Comparable<Key>,Value> {
     public Node<Key,Value> left;
     public Node<Key,Value> right;
     public int height;
+    public Color color;
 }
