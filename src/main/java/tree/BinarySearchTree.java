@@ -135,7 +135,7 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> implements Tree
 
     private Node leftRotate(Node node){
         Node newRoot = node.right;
-        node.right = root.right.left;
+        node.right = node.right.left;
         newRoot.left = node;
         newRoot.height = height(newRoot);
         return newRoot;
@@ -143,7 +143,7 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> implements Tree
 
     private Node rightRotate(Node node){
         Node newRoot = node.left;
-        node.left = root.left.right;
+        node.left = node.left.right;
         newRoot.right = node;
         newRoot.height = height(newRoot);
         return newRoot;
@@ -165,7 +165,7 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> implements Tree
                 node = leftRotate(node);
             }
             else{
-                node = rightRotate(node.left);
+                node = rightRotate(node.right);
                 node = leftRotate(node);
             }
         }
