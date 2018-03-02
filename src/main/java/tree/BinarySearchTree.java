@@ -1,5 +1,7 @@
 package tree;
 
+import linked_list.LinkedList;
+
 public class BinarySearchTree<Key extends Comparable<Key>,Value> implements Tree<Key,Value> {
 
     private Node root;
@@ -38,14 +40,14 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> implements Tree
     @Override
     @Deprecated
     public synchronized Node search(Node node, Key key) {
-        if(root.getKey().equals(key)){
-            return root;
+        if(node.getKey().equals(key)){
+            return node;
         }
-        if(root.getKey().compareTo(key) == -1){
-            return search(root.right,key);
+        if(node.getKey().compareTo(key) == -1){
+            return search(node.right,key);
         }
-        if(root.getKey().compareTo(key) == 1){
-            return search(root.left,key);
+        if(node.getKey().compareTo(key) == 1){
+            return search(node.left,key);
         }
         return null;
     }
@@ -179,8 +181,33 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> implements Tree
      * @param b
      * @return lowest common ancestor
      */
-    private Node lowestCommonAncestor(Node root,Node a,Node b){
-        return null;
+    private Key lowestCommonAncestor(Node root,Node a,Node b){
+        LinkedList first = new LinkedList();
+        LinkedList second = new LinkedList();
+        Node current = root;
+        while(current.getKey() != a.getKey()){
+            first.push((Number)current.getKey());
+            current = current.getKey().compareTo(a.getKey())<0 ? current.right : current.left;
+        }
+        while(root.getKey() != b.getKey()){
+            second.push((Number)root.getKey());
+            root = root.getKey().compareTo(b.getKey())<0 ? root.right : root.left;
+        }
+        linked_list.Node head1 = first.getHead();
+        linked_list.Node head2 = second.getHead();
+        Number ans = null;
+        while(head1 != null && head2 != null){
+            if(head1.getData().equals(head2.getData())){
+                ans = head1.getData();
+            }
+            head1 = head1.next;
+            head2 = head2.next;
+        }
+        return (Key)ans;
+    }
+
+    public Key LCA(Key a,Key b){
+        return lowestCommonAncestor(root,contains(a),contains(b));
     }
 
 }
