@@ -4,15 +4,18 @@ public class SegmentTree {
 
     private int [] segmentTree;
     private int [] initialArray;
+    private int height;
     private static final int MAXVALUE = Integer.MAX_VALUE;
     private static final int MINVALUE = Integer.MIN_VALUE;
 
-    public SegmentTree(int [] initialArray){
+    public SegmentTree(int [] initialArray,int height){
         int low = 0;
         int high = initialArray.length - 1;
+        this.height = height;
         this.initialArray = initialArray;
-        this.segmentTree = new int[segmentTreeLength(initialArray.length)];
-        constructSegmentTreeForXorAndOrOperations(initialArray,low,high,0,2);
+        //this.segmentTree = new int[segmentTreeLength(initialArray.length)];
+        this.segmentTree = new int[2*initialArray.length-1];
+        constructSegmentTreeForXorAndOrOperations(initialArray,low,high,0,height);
     }
 
     private int segmentTreeLength(int initialArrayLength){
@@ -24,6 +27,10 @@ public class SegmentTree {
             result <<= 1;
         }
         return 2*result - 1;
+    }
+
+    public int answer(){
+        return segmentTree[0];
     }
 
     private void constructSegmentTree(int [] initialArray,int lowIndex,int highIndex,int position){
@@ -54,6 +61,28 @@ public class SegmentTree {
             segmentTree[position] = segmentTree[2*position+1] ^ segmentTree[2*position+2];
         }
     }
+
+    private void updateSemgentTreeForXorAndOrOperation(int lowIndex,int highIndex,int changeableIndex,int valueToChange,
+                                                       int position,int height){
+        if(changeableIndex < lowIndex || highIndex<changeableIndex){
+            return;
+        }
+        if(lowIndex == highIndex){
+            segmentTree[position] = valueToChange;
+            return;
+        }
+        int middle = (lowIndex + highIndex)/2;
+        updateSemgentTreeForXorAndOrOperation(lowIndex,middle,changeableIndex,valueToChange,2*position+1,height-1);
+        updateSemgentTreeForXorAndOrOperation(middle+1,highIndex,changeableIndex,valueToChange,2*position+2,height-1);
+        segmentTree[position] = height %2 ==1 ? segmentTree[2*position+1] | segmentTree[2*position+2] :
+                segmentTree[2*position+1] ^ segmentTree[2*position+2];
+    }
+
+    public void updateFotBitmask(int changeableIndex,int valueToChange){
+        updateSemgentTreeForXorAndOrOperation(0,initialArray.length-1,changeableIndex,valueToChange,
+                0,height);
+    }
+
 
     public int queryMaximum(int lowIndex,int highIndex){
         return rangeMaxQuery(0,initialArray.length-1,lowIndex,highIndex,0);

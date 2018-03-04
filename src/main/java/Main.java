@@ -1,18 +1,17 @@
-import org.omg.CORBA.INTERNAL;
-import speedTest.TreeTime;
-import tree.BinarySearchTree;
-import tree.SegmentTree;
-import tree.ThreadSafe;
-
-import java.util.Scanner;
+import linked_list.LinkedList;
 
 public class Main {
 
     public static void main(String[] args){
-
-        int arr [] = {1,2,3,4};
-        SegmentTree segmentTree = new SegmentTree(arr);
-        segmentTree.printSegmentTree();
-
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.push(23);
+        linkedList.push(65);
+        linkedList.push(67);
+        for(int i:linkedList){
+            System.out.println(i);
+        }
+        for(int i:linkedList){
+            System.out.println(i);
+        }
     }
 }

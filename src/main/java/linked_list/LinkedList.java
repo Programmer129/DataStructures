@@ -2,7 +2,9 @@ package linked_list;
 
 import stack.Stack;
 
-public class LinkedList<T extends Number> {
+import java.util.Iterator;
+
+public class LinkedList<T extends Number> implements Iterable<T> {
 
     private Node head;
 
@@ -260,4 +262,8 @@ public class LinkedList<T extends Number> {
         return previous;
     }
 
+    @Override
+    public Iterator<T> iterator() {
+        return new LinkedListIterator(this.head);
+    }
 }

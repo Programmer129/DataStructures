@@ -2,6 +2,8 @@ package tree;
 
 import linked_list.LinkedList;
 
+import java.util.Iterator;
+
 public class BinarySearchTree<Key extends Comparable<Key>,Value> implements Tree<Key,Value> {
 
     private Node root;
