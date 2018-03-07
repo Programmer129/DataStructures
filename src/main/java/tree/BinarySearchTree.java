@@ -10,6 +10,10 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> implements Tree
 
     public BinarySearchTree(){ }
 
+    public static <Key extends Comparable<Key>,Value> BinarySearchTree<Key,Value> newInstance(){
+        return new BinarySearchTree<>();
+    }
+
     public void insert(Key key,Value value){
             this.root = insertRecursion(root, key, value);
     }

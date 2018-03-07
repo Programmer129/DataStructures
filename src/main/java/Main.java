@@ -1,17 +1,28 @@
-import linked_list.LinkedList;
+import strings.Trie;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args){
-        LinkedList<Integer> linkedList = new LinkedList<>();
-        linkedList.push(23);
-        linkedList.push(65);
-        linkedList.push(67);
-        for(int i:linkedList){
-            System.out.println(i);
+
+        try(Scanner in = new Scanner(System.in)) {
+            int n = in.nextInt();
+            Trie trie = new Trie();
+            for(int i=0;i<n;i++){
+                String s = in.next();
+                String s1 = in.next();
+                if(s.equals("add")){
+                    trie.insert(s1);
+                }
+                else{
+                    System.out.println(trie.numberOfPrefix(s1));
+                }
+            }
         }
-        for(int i:linkedList){
-            System.out.println(i);
+        catch (Exception ex){
+            ex.printStackTrace();
         }
+
+
     }
 }
