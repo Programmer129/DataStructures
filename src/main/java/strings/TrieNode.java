@@ -8,10 +8,12 @@ public class TrieNode {
 
     public Map<Character,TrieNode> hashMap;
     public boolean isLast;
+    public int size;
 
     public TrieNode() {
         this.hashMap = new HashMap<>();
         this.isLast = false;
+        this.size = 1;
     }
 
     @Override

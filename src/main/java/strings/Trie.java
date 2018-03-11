@@ -15,10 +15,15 @@ public class Trie {
     public void insert(String word){
         TrieNode current = this.root;
         for(int i=0;i<word.length();i++){
-            if(!current.hashMap.containsKey(word.charAt(i))){
-                current.hashMap.put(word.charAt(i),new TrieNode());
+            TrieNode node = current.hashMap.get(word.charAt(i));
+            if(node ==  null){
+                node = new TrieNode();
+                current.hashMap.put(word.charAt(i),node);
             }
-            current = current.hashMap.get(word.charAt(i));
+            else{
+                node.size++;
+            }
+            current = node;
         }
         current.isLast = true;
     }
@@ -28,27 +33,15 @@ public class Trie {
      * @param word
      * @return
      */
-    public boolean search(String word){
+    public int search(String word){
         TrieNode current = this.root;
         for(int i=0;i<word.length();i++){
             if(!current.hashMap.containsKey(word.charAt(i))){
-                return false;
+                return 0;
             }
             current = current.hashMap.get(word.charAt(i));
         }
-        return true;
-    }
-
-    public int numberOfPrefix(String word){
-        int answer = 0;
-        TrieNode current = this.root;
-        for(int i=0;i<word.length();i++){
-            if(!current.hashMap.containsKey(word.charAt(i))){
-                return answer;
-            }
-            current = current.hashMap.get(word.charAt(i));
-        }
-        return current.isLast ? 0 : current.hashMap.size();
+        return current.size;
     }
 
 
