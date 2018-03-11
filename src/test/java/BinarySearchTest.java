@@ -1,18 +1,23 @@
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
 import tree.BinarySearchTree;
+
+import static org.mockito.Mockito.when;
 
 public class BinarySearchTest {
 
-    BinarySearchTree<Integer,Integer> binarySearchTree = new BinarySearchTree<>();
+    @Mock
+    BinarySearchTree<Integer,Integer> binarySearchTree;
+
+    @Before
+    public void init(){
+        
+    }
 
     @Test
     void  deleteTest(){
-        binarySearchTree.insert(64,0);
-        binarySearchTree.insert(7,0);
-        binarySearchTree.insert(43,0);
-        binarySearchTree.insert(1,0);
-        binarySearchTree.insert(56,0);
-        binarySearchTree.insert(23,0);
+
     }
 }
