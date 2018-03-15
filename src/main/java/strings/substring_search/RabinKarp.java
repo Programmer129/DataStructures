@@ -18,7 +18,6 @@ public final class RabinKarp {
             dictionary.put((char)i,i - L_MODULE);
             dictionary.put((char)j,j - U_MODULE);
         }
-        dictionary.put(' ',60);
     }
 
     private static int currentHash(Character last, Character next, int lastHash){

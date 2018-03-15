@@ -11,30 +11,28 @@ public class NaiveSubstringSearchTest {
 
     @Test
     public void emptryTextTest(){
-        //boolean answer = NaiveSubstringSearch.containPatter("", "pattern");
-
-        boolean answer = RabinKarp.containPattern("", "pattern");
+        boolean answer = NaiveSubstringSearch.containPatter("", "pattern");
 
         assertFalse(answer);
     }
 
     @Test
     public void emptyPatternTest(){
-        boolean answer = RabinKarp.containPattern("text", "");
+        boolean answer = NaiveSubstringSearch.containPatter("text", "");
 
         assertFalse(answer);
     }
 
     @Test
     public void shouldReturnTrue(){
-        boolean answer = RabinKarp.containPattern("text to search", " to ");
+        boolean answer = NaiveSubstringSearch.containPatter("text to search", " to ");
 
         assertTrue(answer);
     }
 
     @Test
     public void shouldReturnFalse(){
-        boolean answer = RabinKarp.containPattern("text to search", "to seac");
+        boolean answer = NaiveSubstringSearch.containPatter("text to search", "to seac");
 
         assertFalse(answer);
     }
