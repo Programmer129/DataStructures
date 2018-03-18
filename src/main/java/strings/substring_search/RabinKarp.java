@@ -18,6 +18,7 @@ public final class RabinKarp {
             dictionary.put((char)i,i - L_MODULE);
             dictionary.put((char)j,j - U_MODULE);
         }
+        dictionary.put(' ', 60);
     }
 
     private static int currentHash(Character last, Character next, int lastHash){
@@ -32,7 +33,9 @@ public final class RabinKarp {
         return hash;
     }
 
-    public static boolean containPattern(String text, String pattern){
+    public synchronized static boolean containPattern(String text, String pattern){
+
+        System.out.println(Thread.currentThread().getName()+" start");
 
         createAlpabetHash();
 
@@ -64,6 +67,7 @@ public final class RabinKarp {
                 }
             }
         }
+        System.out.println(Thread.currentThread().getName()+" end");
 
         return contains;
     }
