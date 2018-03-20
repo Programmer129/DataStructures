@@ -1,0 +1,5 @@
+ZAlgorithm time:  0.0
+KnuthMorrisPratt time: 0.015
+NaiveSubStringSearch time: 0.016
+Trie time: 0.016
+RabbinKrap time: 0.022

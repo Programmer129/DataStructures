@@ -3,7 +3,7 @@ package strings.substring_search;
 
 import java.util.HashSet;
 
-public class Z_Algorithm {
+public final class ZAlgorithm {
 
     private int[] Z_Array(String s) {
         int size_string = s.length();
@@ -34,13 +34,14 @@ public class Z_Algorithm {
         }
         return Z;
     }
+
     /*
-    Z algorithm is sub string search algorithm
-    time complexity O(m+n)
-    @param text
-    @param pattern
-    @return true if found and false otherwise
+     * @param mainString
+     * @param pattern
+     * @return true or false
      */
+
+
     private boolean is_subString(String mainString, String pattern) {
         if(pattern.length()==0 || mainString.length()==0){
             return false;

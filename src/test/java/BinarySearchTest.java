@@ -14,6 +14,7 @@ public class BinarySearchTest {
     @Before
     public void init(){
 
+
     }
 
     @Test

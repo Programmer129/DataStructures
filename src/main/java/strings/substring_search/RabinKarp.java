@@ -25,6 +25,10 @@ public final class RabinKarp {
         return lastHash - dictionary.get(last)*PRIME + dictionary.get(next)*PRIME;
     }
 
+    /**
+     * @param substring
+     * @return
+     */
     private static int createHash(String substring){
         int hash = 0;
         for(int i = 0; i < substring.length(); i++){

@@ -2,14 +2,12 @@ package substring_search_tests;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
-import strings.substring_search.NaiveSubstringSearch;
-import strings.substring_search.RabinKarp;
-import strings.substring_search.Z_Algorithm;
 
-import java.util.Random;
+import strings.substring_search.RabinKarp;
+import strings.substring_search.ZAlgorithm;
 
 public class NaiveSubstringSearchTest {
-    Z_Algorithm Z=new Z_Algorithm();
+    ZAlgorithm Z=new ZAlgorithm();
 
     @Test
     public void emptryTextTest(){
