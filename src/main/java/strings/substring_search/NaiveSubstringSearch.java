@@ -12,7 +12,7 @@ public final class NaiveSubstringSearch {
      * @param pattern
      * @return true if pattern is in text and false otherwise
      */
-    public static boolean containPatter(String text, String pattern) {
+    public static boolean containPattern(String text, String pattern) {
         if(pattern.length() ==0 || text.length() == 0){
             return false;
         }
