@@ -1,10 +1,12 @@
-import strings.multithreading.SingleThreadSingleAlgorithm;
+import grapth.AdjacentList;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        new SingleThreadSingleAlgorithm("this is sample text", "is sa");
+        AdjacentList<Integer> adjacentList = AdjacentList.getInstance();
+
+        adjacentList.addEdge(1,3);
 
     }
 }
