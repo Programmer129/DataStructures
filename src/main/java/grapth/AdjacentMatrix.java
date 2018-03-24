@@ -19,4 +19,17 @@ public class AdjacentMatrix<T> implements Graph<T> {
     public Set<T> getChildren(T a) {
         return null;
     }
+
+    @Override
+    public void printGraph() { }
+
+    @Override
+    public List<Set<T>> getGraph() {
+        return null;
+    }
+
+    @Override
+    public void setInitialSize(int initialSize) {
+
+    }
 }

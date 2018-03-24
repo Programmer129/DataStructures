@@ -8,13 +8,19 @@ import java.util.Set;
 public final class AdjacentList<T> implements Graph<T> {
 
     private List<Set<T>> graph;
-    private int initialSize = 16;
+    private int initialSize;
 
     private AdjacentList(){
+        this.initialSize++;
         this.graph = new ArrayList<>();
-        for(int i = 0; i < initialSize; i++){
+        for(int i = 1; i < initialSize; i++){
             this.graph.add(new HashSet<>());
         }
+    }
+
+    @Override
+    public void setInitialSize(int initialSize) {
+        this.initialSize = initialSize;
     }
 
     public static <T> AdjacentList<T> getInstance(){
@@ -22,23 +28,14 @@ public final class AdjacentList<T> implements Graph<T> {
     }
 
     @Override
+    public List<Set<T>> getGraph() {
+        return this.graph;
+    }
+
+    @Override
     public boolean addEdge(T a, T b) {
-        if(this.graph.get(Integer.valueOf(a.toString())).contains(b) ||
-                this.graph.get(Integer.valueOf(b.toString())).contains(a)){
-            return false;
-        }
-        if(this.graph.size() > initialSize){
-            initialSize <<= 1;
-            if(initialSize >= Constants.LIMIT){
-                throw new IndexOutOfBoundsException("index out of bound");
-            }
-            List<Set<T>> newGraph = new ArrayList<>();
-            this.graph.stream().map(newGraph::add);
-            for(int i = initialSize>>1; i < initialSize; i++){
-                this.graph.add(new HashSet<>());
-            }
-        }
-        this.graph.get(Integer.valueOf(a.toString())).add(b);
+
+        this.graph.get(Integer.valueOf(a.toString()) - 1).add(b);
         return  true;
     }
 
@@ -52,6 +49,7 @@ public final class AdjacentList<T> implements Graph<T> {
         return this.graph.get(Integer.valueOf(a.toString()));
     }
 
+    @Override
     public void printGraph() {
         for (int i = 0; i < this.graph.size(); i++) {
             System.out.println(i + ":"+this.graph.get(i));
