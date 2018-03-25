@@ -11,6 +11,11 @@ public class AdjacentMatrix<T> implements Graph<T> {
     }
 
     @Override
+    public boolean removeVertex(T a) {
+        return false;
+    }
+
+    @Override
     public boolean removeEdge(T a, T b) {
         return false;
     }

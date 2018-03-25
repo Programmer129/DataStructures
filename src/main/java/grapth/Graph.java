@@ -7,6 +7,8 @@ public interface Graph<T> {
 
     boolean addEdge(T a, T b);
 
+    boolean removeVertex(T a);
+
     boolean removeEdge(T a, T b);
 
     Set<T> getChildren(T a);

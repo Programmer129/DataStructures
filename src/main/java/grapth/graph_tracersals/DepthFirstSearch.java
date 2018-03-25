@@ -1,55 +1,87 @@
 package grapth.graph_tracersals;
 
-import java.util.Arrays;
+import grapth.Constants;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public final class DepthFirstSearch {
+public final class DepthFirstSearch<T extends Number> {
 
-    private List<Set<Integer>> graph;
+    private List<Set<T>> graph;
     private List<Boolean> visited;
-    private List<Integer> parents;
+    private List<T> parents;
 
-    public List<Integer> getParents() {
+    public List<T> getParents() {
         return parents;
     }
 
     private void init() {
-        Boolean [] arr = new Boolean[16];
-        Arrays.fill(arr, false);
-        this.visited = Arrays.asList(arr);
-        Integer [] arr1 = new Integer[16];
-        Arrays.fill(arr1, -1);
-        this.parents = Arrays.asList(arr1);
+        int size = this.graph.size();
+        this.parents = new ArrayList<>(size);
+        this.visited = new ArrayList<>(size);
+
+        for(int i = 0; i< size; i++){
+            this.parents.add(i, (T)(Number) Constants.INITIAL_VALUE);
+            this.visited.add(i, false);
+        }
     }
 
-    public DepthFirstSearch() {
-        this.init();
-    }
-
-    public void setGraph(List<Set<Integer>> graph){
+    public DepthFirstSearch(List<Set<T>> graph) {
         this.graph = graph;
     }
 
-    public void dfs(int s) {
-        this.visited.set(s, true);
-        for(int node: this.graph.get(s)){
-            if(!this.visited.get(node)){
-                this.parents.set(node, s);
-                dfs(node);
+    private void dfsInit(T s) {
+        this.visited.set(s.intValue(), true);
+        for(T node: this.graph.get(s.intValue())){
+            if(!this.visited.get(node.intValue())){
+                this.parents.set(node.intValue(), s);
+                dfsInit(node);
             }
         }
     }
 
+    public synchronized void dfs(T s) {
+        this.init();
+        s = (T)(Number)(s.intValue() - 1);
+        dfsInit(s);
+    }
+
     public int connectedComponents() {
+        this.init();
         int cc = 0;
-        for(int i = 1; i < this.graph.size(); i++) {
+        for(int i = 0; i < this.graph.size(); i++) {
             if(!this.visited.get(i)){
                 cc++;
-                dfs(i);
+                dfsInit((T)(Number)i);
             }
         }
         return cc;
+    }
+
+    private boolean hasCycleInit(T s) {
+        this.visited.set(s.intValue(), true);
+        for(T node: this.graph.get(s.intValue())){
+            if(!this.visited.get(node.intValue())){
+                this.parents.set(node.intValue(), s);
+                hasCycleInit(node);
+            }
+            else
+                if(!node.equals(this.parents.get(s.intValue()))){
+                    return true;
+                }
+        }
+        return false;
+    }
+
+    /**
+     * works only undirected graph
+     * @return
+     */
+    public boolean hasCycle() {
+        this.init();
+        T one = (T)(Number)(1);
+        return hasCycleInit(one);
     }
 
 }

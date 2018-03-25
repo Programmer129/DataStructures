@@ -1,34 +1,39 @@
 import grapth.AdjacentList;
 import grapth.Graph;
+import grapth.Pair;
+import grapth.SimulateGraph;
 import grapth.graph_tracersals.BreadthFirstSearch;
 import grapth.graph_tracersals.DepthFirstSearch;
 
+import java.util.List;
+import java.util.Map;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
-        Graph<Integer> adjacentList = AdjacentList.getInstance();
+        Graph<Integer> graph = AdjacentList.getInstance();
 
-        adjacentList.setInitialSize(5);
+        graph.setInitialSize(10000);
 
+        List<Pair<Integer,Integer>> edges = SimulateGraph.generateTestCase();
 
-       adjacentList.addEdge(1,2);
-        adjacentList.printGraph();
-//        adjacentList.addEdge(1,5);
-//        adjacentList.addEdge(2,3);
-//        adjacentList.addEdge(3,4);
+        for(Pair<Integer,Integer> a: edges) {
+            graph.addEdge(a.getFirst(), a.getSecond());
+        }
 
-        DepthFirstSearch depthFirstSearch = new DepthFirstSearch();
+        graph.printGraph();
 
-        depthFirstSearch.setGraph(adjacentList.getGraph());
+        BreadthFirstSearch<Integer> breadthFirstSearch = new BreadthFirstSearch<>(graph.getGraph());
 
-        System.out.println(depthFirstSearch.connectedComponents());
+        long startBfs = System.currentTimeMillis();
 
+        breadthFirstSearch.bfs(1);
 
-//        BreadthFirstSearch breadthFirstSearch = new BreadthFirstSearch();
-//        breadthFirstSearch.setGraph(adjacentList.getGraph());
-//        breadthFirstSearch.bfs(1);
-//        System.out.println(breadthFirstSearch.getParents());
+        long endBfs = System.currentTimeMillis();
+
+        System.out.println((double)(endBfs - startBfs)/1000.0);
+
 
     }
 }
