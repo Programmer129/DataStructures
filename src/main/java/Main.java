@@ -1,39 +1,45 @@
 import grapth.AdjacentList;
 import grapth.Graph;
 import grapth.Pair;
-import grapth.SimulateGraph;
-import grapth.graph_tracersals.BreadthFirstSearch;
-import grapth.graph_tracersals.DepthFirstSearch;
+import grapth.traversal_applications.StronglyConnectedComponents;
 
 import java.util.List;
-import java.util.Map;
 
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
         Graph<Integer> graph = AdjacentList.getInstance();
 
-        graph.setInitialSize(10000);
+        graph.setInitialSize(10);
 
-        List<Pair<Integer,Integer>> edges = SimulateGraph.generateTestCase();
+        graph.addEdge(1,2);
+        graph.addEdge(1,4);
+        graph.addEdge(2,3);
+        graph.addEdge(2,5);
+        graph.addEdge(3,1);
+        graph.addEdge(3,7);
+        graph.addEdge(4,3);
+        graph.addEdge(5,6);
+        graph.addEdge(5,7);
+        graph.addEdge(6,7);
+        graph.addEdge(6,8);
+        graph.addEdge(6,9);
+        graph.addEdge(6,10);
+        graph.addEdge(7,5);
+        graph.addEdge(8,10);
+        graph.addEdge(9,10);
 
-        for(Pair<Integer,Integer> a: edges) {
-            graph.addEdge(a.getFirst(), a.getSecond());
+        StronglyConnectedComponents<Integer> stronglyConnectedComponents = new StronglyConnectedComponents<>(graph);
+
+        Pair<List<Integer>[], Integer> scc = stronglyConnectedComponents.getSCC();
+
+        int size = scc.getSecond();
+
+        System.out.println("Strongly connected components:");
+        for(int i=0;i<size;i++){
+            System.out.println(scc.getFirst()[i]);
         }
-
-        graph.printGraph();
-
-        BreadthFirstSearch<Integer> breadthFirstSearch = new BreadthFirstSearch<>(graph.getGraph());
-
-        long startBfs = System.currentTimeMillis();
-
-        breadthFirstSearch.bfs(1);
-
-        long endBfs = System.currentTimeMillis();
-
-        System.out.println((double)(endBfs - startBfs)/1000.0);
-
 
     }
 }

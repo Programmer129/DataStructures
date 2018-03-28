@@ -2,6 +2,7 @@ package grapth;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -28,6 +29,19 @@ public final class AdjacentList<T extends Number> implements Graph<T> {
     @Override
     public List<Set<T>> getGraph() {
         return this.graph;
+    }
+
+    @Override
+    public Graph<T> reverseGraph() {
+        Graph<T> rGraph = AdjacentList.getInstance();
+        rGraph.setInitialSize(this.graph.size());
+        for(int i=0; i< this.graph.size();i++){
+            Set<T> set = this.graph.get(i);
+            for (T t : set) {
+                rGraph.addEdge((T)(Number)(t.intValue()+1),(T)(Number)(i+1));
+            }
+        }
+        return rGraph;
     }
 
     @Override

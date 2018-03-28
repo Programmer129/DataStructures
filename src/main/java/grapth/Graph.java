@@ -17,6 +17,8 @@ public interface Graph<T> {
 
     List<Set<T>> getGraph();
 
+    Graph<T> reverseGraph();
+
     void setInitialSize(int initialSize);
 
 }

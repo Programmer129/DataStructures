@@ -1,6 +1,7 @@
 package grapth.graph_tracersals;
 
 import grapth.Constants;
+import stack.Stack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,16 +12,15 @@ public final class DepthFirstSearch<T extends Number> {
     private List<Set<T>> graph;
     private List<Boolean> visited;
     private List<T> parents;
-
-    public List<T> getParents() {
-        return parents;
-    }
+    private Stack dfsStack;
+    private List<T> scc;
 
     private void init() {
         int size = this.graph.size();
         this.parents = new ArrayList<>(size);
         this.visited = new ArrayList<>(size);
-
+        this.dfsStack = new Stack(size);
+        this.scc = new ArrayList<>(size);
         for(int i = 0; i< size; i++){
             this.parents.add(i, (T)(Number) Constants.INITIAL_VALUE);
             this.visited.add(i, false);
@@ -29,6 +29,7 @@ public final class DepthFirstSearch<T extends Number> {
 
     public DepthFirstSearch(List<Set<T>> graph) {
         this.graph = graph;
+        this.init();
     }
 
     private void dfsInit(T s) {
@@ -45,6 +46,16 @@ public final class DepthFirstSearch<T extends Number> {
         this.init();
         s = (T)(Number)(s.intValue() - 1);
         dfsInit(s);
+    }
+
+    public synchronized void dfsForScc(T s, Stack stack, List<Boolean> visited){
+        visited.set(s.intValue(), true);
+        for(T node: this.graph.get(s.intValue())){
+            if(!visited.get(node.intValue())){
+                dfsForScc(node, stack, visited);
+            }
+        }
+        stack.push(s);
     }
 
     public int connectedComponents() {
@@ -84,4 +95,21 @@ public final class DepthFirstSearch<T extends Number> {
         return hasCycleInit(one);
     }
 
+    public Stack getDfsStack() {
+        return dfsStack;
+    }
+
+    public List<T> getParents() {
+        return parents;
+    }
+
+    public List<Boolean> getVisited() {
+        return visited;
+    }
+
+    public List<T> getScc() {
+        List<T> res = this.scc;
+        this.scc.clear();
+        return res;
+    }
 }

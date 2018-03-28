@@ -34,6 +34,11 @@ public class AdjacentMatrix<T> implements Graph<T> {
     }
 
     @Override
+    public Graph<T> reverseGraph() {
+        return null;
+    }
+
+    @Override
     public void setInitialSize(int initialSize) {
 
     }
