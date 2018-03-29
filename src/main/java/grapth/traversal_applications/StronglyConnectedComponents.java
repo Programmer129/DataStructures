@@ -26,7 +26,11 @@ public class StronglyConnectedComponents<T extends Number> {
         for (int i = 0; i < this.graph.getGraph().size(); i++) {
             visited.add(false);
         }
-        depthFirstSearch.dfsForScc((T)Integer.valueOf(0), stack, visited);
+        for(int i=0;i<this.graph.getGraph().size();i++) {
+            if(!visited.get(i)) {
+                depthFirstSearch.dfsForScc((T) Integer.valueOf(i), stack, visited);
+            }
+        }
         return stack;
     }
 
