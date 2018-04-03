@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 
-public class BreadthFirstSearch<T extends Number> {
+public final class BreadthFirstSearch<T extends Number> {
 
     private List<Boolean> visited;
     private List<T> parents;

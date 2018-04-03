@@ -10,6 +10,8 @@ interface Tree<Key extends Comparable<Key>,Value> {
 
     void inorderTraversal(Node node);
 
+    void postorderTraversal(Node node);
+
     int height(Node node);
 
 }

@@ -2,7 +2,6 @@ package grapth;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -50,6 +49,7 @@ public final class AdjacentList<T extends Number> implements Graph<T> {
         int l = b.intValue() - 1;
 
         this.graph.get(f).add((T)(Number)l);
+        this.graph.get(l).add((T)(Number)f);
         return  true;
     }
 

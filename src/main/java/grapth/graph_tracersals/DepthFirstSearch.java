@@ -14,6 +14,8 @@ public final class DepthFirstSearch<T extends Number> {
     private List<T> parents;
     private Stack dfsStack;
     private List<T> scc;
+    private List<T> ccNumberNodes;
+    private Integer counter;
 
     private void init() {
         int size = this.graph.size();
@@ -21,9 +23,11 @@ public final class DepthFirstSearch<T extends Number> {
         this.visited = new ArrayList<>(size);
         this.dfsStack = new Stack(size);
         this.scc = new ArrayList<>(size);
+        this.ccNumberNodes = new ArrayList<>(size);
         for(int i = 0; i< size; i++){
             this.parents.add(i, (T)(Number) Constants.INITIAL_VALUE);
             this.visited.add(i, false);
+            this.ccNumberNodes.add(i, (T)(Number)0);
         }
     }
 
@@ -34,6 +38,7 @@ public final class DepthFirstSearch<T extends Number> {
 
     private void dfsInit(T s) {
         this.visited.set(s.intValue(), true);
+        this.counter++;
         for(T node: this.graph.get(s.intValue())){
             if(!this.visited.get(node.intValue())){
                 this.parents.set(node.intValue(), s);
@@ -63,8 +68,9 @@ public final class DepthFirstSearch<T extends Number> {
         int cc = 0;
         for(int i = 0; i < this.graph.size(); i++) {
             if(!this.visited.get(i)){
-                cc++;
+                this.counter = 0;
                 dfsInit((T)(Number)i);
+                this.ccNumberNodes.set(cc++, (T)counter);
             }
         }
         return cc;
@@ -105,6 +111,10 @@ public final class DepthFirstSearch<T extends Number> {
 
     public List<Boolean> getVisited() {
         return visited;
+    }
+
+    public List<T> getCcNumberNodes() {
+        return ccNumberNodes;
     }
 
     public List<T> getScc() {

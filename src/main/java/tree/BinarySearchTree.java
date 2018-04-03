@@ -85,7 +85,7 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> implements Tree
     }
 
     public void print(){
-        inorderTraversal(this.root);
+        postorderTraversal(this.root);
     }
 
     @Override
@@ -94,6 +94,16 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> implements Tree
             inorderTraversal(root.left);
             System.out.println(root.getKey());
             inorderTraversal(root.right);
+        }
+    }
+
+    @Override
+    public void postorderTraversal(Node node) {
+        if(node != null){
+            postorderTraversal(node.right);
+            postorderTraversal(node.left);
+            System.out.println(node.getKey());
+
         }
     }
 
@@ -156,7 +166,7 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> implements Tree
                 node = rightRotate(node);
             }
             else{
-                node = leftRotate(node.left);
+                node.left = leftRotate(node.left);
                 node = rightRotate(node);
             }
         }
@@ -165,7 +175,7 @@ public class BinarySearchTree<Key extends Comparable<Key>,Value> implements Tree
                 node = leftRotate(node);
             }
             else{
-                node = rightRotate(node.right);
+                node.right = rightRotate(node.right);
                 node = leftRotate(node);
             }
         }

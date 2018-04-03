@@ -31,6 +31,7 @@ public class StronglyConnectedComponents<T extends Number> {
                 depthFirstSearch.dfsForScc((T) Integer.valueOf(i), stack, visited);
             }
         }
+
         return stack;
     }
 
