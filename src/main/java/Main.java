@@ -1,24 +1,30 @@
 import grapth.Pair;
-import grapth.SimulateGraph;
-import grapth.weighted_graph.WeithedGraph;
+import grapth.weighted_graph.minimum_spaning_tree.Kruskal;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        WeithedGraph<Integer,Integer> weithedGraph = WeithedGraph.getInstance();
+         List<Pair<Integer,Pair<Integer,Integer>>> edgeList = new ArrayList<>();
 
-        weithedGraph.setInitialSize(100);
+         edgeList.add(new Pair<>(0,new Pair<>(1,10)));
+         edgeList.add(new Pair<>(0,new Pair<>(2,5)));
+         edgeList.add(new Pair<>(1,new Pair<>(3,7)));
+         edgeList.add(new Pair<>(2,new Pair<>(3,1)));
+         edgeList.add(new Pair<>(2,new Pair<>(4,2)));
+         edgeList.add(new Pair<>(4,new Pair<>(1,3)));
 
-        List<Pair<Integer, Pair<Integer,Integer>>> edges = SimulateGraph.generateTestCase();
+        Kruskal<Integer,Integer> kruskal = new Kruskal<>(edgeList, 5);
 
-        edges.forEach(edge -> {
-            weithedGraph.addEdge(edge.getFirst(),edge.getSecond().getFirst(),edge.getSecond().getSecond());
-        });
+        kruskal.findMST();
 
-        weithedGraph.printGraph();
+        List<Pair<Integer,Integer>> mst = kruskal.getMst();
+
+        System.out.println(mst);
+        System.out.println(kruskal.getMstValue());
 
     }
 }
