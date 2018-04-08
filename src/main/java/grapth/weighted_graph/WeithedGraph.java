@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+@SuppressWarnings("unchecked")
 public class WeithedGraph<T extends Number,E extends Number>{
 
     private List<LinkedList<Pair<T,E>>> graph = new ArrayList<>();

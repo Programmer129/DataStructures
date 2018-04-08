@@ -8,6 +8,7 @@ import stack.Stack;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("unchecked")
 public class StronglyConnectedComponents<T extends Number> {
 
     private DepthFirstSearch<T> depthFirstSearch;

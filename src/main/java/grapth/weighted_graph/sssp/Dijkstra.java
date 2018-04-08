@@ -9,6 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
 
+@SuppressWarnings("unchecked")
 public final class Dijkstra<T extends Number, E extends Number> {
 
     private List<LinkedList<Pair<T,E>>> graph;

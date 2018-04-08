@@ -5,17 +5,16 @@ import grapth.Constants;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("unchecked")
 public class UnionFind<T extends Number> {
 
     private List<T> tree;
     private List<Integer> sizeOfTree;
-    private int size;
 
     public UnionFind(int size) {
-        this.size = size;
         this.tree = new ArrayList<>(size);
         this.sizeOfTree = new ArrayList<>(size);
-        for (int i=0;i<this.size;i++){
+        for (int i = 0; i< size; i++){
             this.tree.add((T)(Number)Constants.INITIAL_VALUE);
             this.sizeOfTree.add(Constants.INITIAL_POS_VALUE);
         }

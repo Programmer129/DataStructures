@@ -9,6 +9,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("unchecked")
 public class Kruskal<T extends Number,E extends Number> {
 
     private List<Pair<T,Pair<T,E>>> edgeList;

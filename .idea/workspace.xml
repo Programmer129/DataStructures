@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e49c156-3319-4f75-8da0-e2eee03c3238" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/sssp/Dijkstra.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/grapth/informed_search/EightPuzzleBfs.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/grapth/informed_search/StateNode.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grapth/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/grapth/Constants.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grapth/SimulateGraph.java" afterPath="$PROJECT_DIR$/src/main/java/grapth/SimulateGraph.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grapth/traversal_applications/StronglyConnectedComponents.java" afterPath="$PROJECT_DIR$/src/main/java/grapth/traversal_applications/StronglyConnectedComponents.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/WeithedGraph.java" afterPath="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/WeithedGraph.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/linked_list/LinkedList.java" afterPath="$PROJECT_DIR$/src/main/java/linked_list/LinkedList.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/linked_list/LinkedListIterator.java" afterPath="$PROJECT_DIR$/src/main/java/linked_list/LinkedListIterator.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="$PROJECT_DIR$/target/classes/Main.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/linked_list/LinkedList.class" afterPath="$PROJECT_DIR$/target/classes/linked_list/LinkedList.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/linked_list/LinkedListIterator.class" afterPath="$PROJECT_DIR$/target/classes/linked_list/LinkedListIterator.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/minimum_spaning_tree/Kruskal.java" afterPath="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/minimum_spaning_tree/Kruskal.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/sssp/Dijkstra.java" afterPath="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/sssp/Dijkstra.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/union_find/UnionFind.java" afterPath="$PROJECT_DIR$/src/main/java/union_find/UnionFind.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +29,61 @@
     </SUITE>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EightPuzzleBfs.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/grapth/informed_search/EightPuzzleBfs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1309">
+              <caret line="77" column="33" lean-forward="true" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1138#1139#0" expanded="true" />
+                <element signature="e#1220#1221#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/grapth/informed_search/StateNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+              <folding>
+                <element signature="e#645#646#0" expanded="true" />
+                <element signature="e#674#675#0" expanded="true" />
+                <element signature="e#719#720#0" expanded="true" />
+                <element signature="e#755#756#0" expanded="true" />
+                <element signature="e#780#781#0" expanded="true" />
+                <element signature="e#804#805#0" expanded="true" />
+                <element signature="e#829#830#0" expanded="true" />
+                <element signature="e#853#854#0" expanded="true" />
+                <element signature="e#884#885#0" expanded="true" />
+                <element signature="e#910#911#0" expanded="true" />
+                <element signature="e#939#940#0" expanded="true" />
+                <element signature="e#967#968#0" expanded="true" />
+                <element signature="e#1006#1007#0" expanded="true" />
+                <element signature="e#1040#1041#0" expanded="true" />
+                <element signature="e#1076#1077#0" expanded="true" />
+                <element signature="e#1111#1112#0" expanded="true" />
+                <element signature="e#1164#1165#0" expanded="true" />
+                <element signature="e#1212#1213#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -99,22 +151,24 @@
         <option value="$PROJECT_DIR$/src/main/java/grapth/Graph.java" />
         <option value="$PROJECT_DIR$/src/main/java/stack/Stack.java" />
         <option value="$PROJECT_DIR$/src/main/java/grapth/Pair.java" />
-        <option value="$PROJECT_DIR$/src/main/java/grapth/traversal_applications/StronglyConnectedComponents.java" />
         <option value="$PROJECT_DIR$/src/main/java/tree/Tree.java" />
         <option value="$PROJECT_DIR$/src/main/java/tree/RadBlackTree.java" />
         <option value="$PROJECT_DIR$/src/main/java/tree/BinarySearchTree.java" />
         <option value="$PROJECT_DIR$/src/main/java/grapth/graph_tracersals/DepthFirstSearch.java" />
         <option value="$PROJECT_DIR$/src/main/java/grapth/graph_tracersals/BreadthFirstSearch.java" />
         <option value="$PROJECT_DIR$/src/main/java/grapth/AdjacentList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/union_find/UnionFind.java" />
-        <option value="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/minimum_spaning_tree/Kruskal.java" />
         <option value="$PROJECT_DIR$/src/main/java/linked_list/LinkedList.java" />
         <option value="$PROJECT_DIR$/src/main/java/linked_list/LinkedListIterator.java" />
         <option value="$PROJECT_DIR$/src/main/java/grapth/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/sssp/Dijkstra.java" />
         <option value="$PROJECT_DIR$/src/main/java/grapth/SimulateGraph.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/sssp/Dijkstra.java" />
+        <option value="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/minimum_spaning_tree/Kruskal.java" />
         <option value="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/WeithedGraph.java" />
+        <option value="$PROJECT_DIR$/src/main/java/grapth/traversal_applications/StronglyConnectedComponents.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/union_find/UnionFind.java" />
+        <option value="$PROJECT_DIR$/src/main/java/grapth/informed_search/EightPuzzleBfs.java" />
+        <option value="$PROJECT_DIR$/src/main/java/grapth/informed_search/StateNode.java" />
       </list>
     </option>
   </component>
@@ -216,6 +270,33 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="grapth" type="462c0819:PsiDirectoryNode" />
+              <item name="graph_tracersals" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataStructures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="grapth" type="462c0819:PsiDirectoryNode" />
+              <item name="informed_search" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataStructures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="grapth" type="462c0819:PsiDirectoryNode" />
+              <item name="traversal_applications" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataStructures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="grapth" type="462c0819:PsiDirectoryNode" />
               <item name="weighted_graph" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -237,6 +318,81 @@
               <item name="grapth" type="462c0819:PsiDirectoryNode" />
               <item name="weighted_graph" type="462c0819:PsiDirectoryNode" />
               <item name="sssp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataStructures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="linked_list" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataStructures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="linked_list" type="462c0819:PsiDirectoryNode" />
+              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataStructures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="speedTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataStructures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="stack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataStructures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataStructures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+              <item name="multithreading" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataStructures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+              <item name="substring_search" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataStructures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tree" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataStructures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="union_find" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -524,7 +680,7 @@
       <workItem from="1522876161781" duration="5192000" />
       <workItem from="1523039781051" duration="4718000" />
       <workItem from="1523187693319" duration="26000" />
-      <workItem from="1523188405746" duration="6255000" />
+      <workItem from="1523188405746" duration="18669000" />
     </task>
     <servers />
   </component>
@@ -561,10 +717,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114813000" />
+    <option name="totallyTimeSpent" value="127227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-3" width="1366" height="771" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -579,7 +736,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21669106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21669106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -635,26 +792,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/substring_search_tests/KnuthMorrisPrathTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/strings/TrieNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/strings/Trie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -843,20 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/union_find/UnionFind.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/traversal_applications/StronglyConnectedComponents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/grapth/graph_tracersals/BreadthFirstSearch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -925,30 +1053,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/weighted_graph/minimum_spaning_tree/Kruskal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/grapth/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="56" lean-forward="true" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/weighted_graph/WeithedGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding>
-            <element signature="e#612#613#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -960,25 +1069,110 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/searching/eight_puzzle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/traversal_applications/StronglyConnectedComponents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="50" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+          <folding>
+            <element signature="e#203#233#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/weighted_graph/WeithedGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding>
+            <element signature="e#134#164#0" expanded="false" />
+            <element signature="e#643#644#0" expanded="false" />
+            <element signature="e#686#687#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/weighted_graph/minimum_spaning_tree/Kruskal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="e#245#275#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/grapth/weighted_graph/sssp/Dijkstra.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="20" column="60" lean-forward="true" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
+        <state relative-caret-position="68">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="e#225#255#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/union_find/UnionFind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding>
+            <element signature="e#99#129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/informed_search/EightPuzzleBfs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="77" column="33" lean-forward="true" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1650#1651#0" expanded="true" />
-            <element signature="e#1705#1706#0" expanded="true" />
+            <element signature="e#1138#1139#0" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/informed_search/StateNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#804#805#0" expanded="true" />
+            <element signature="e#829#830#0" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+            <element signature="e#967#968#0" expanded="true" />
+            <element signature="e#1006#1007#0" expanded="true" />
+            <element signature="e#1040#1041#0" expanded="true" />
+            <element signature="e#1076#1077#0" expanded="true" />
+            <element signature="e#1111#1112#0" expanded="true" />
+            <element signature="e#1164#1165#0" expanded="true" />
+            <element signature="e#1212#1213#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
