@@ -1,30 +1,31 @@
 import grapth.Pair;
-import grapth.weighted_graph.minimum_spaning_tree.Kruskal;
+import grapth.SimulateGraph;
+import grapth.weighted_graph.WeithedGraph;
+import grapth.weighted_graph.sssp.Dijkstra;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
 
-         List<Pair<Integer,Pair<Integer,Integer>>> edgeList = new ArrayList<>();
+        WeithedGraph<Integer, Integer> graph = WeithedGraph.getInstance();
 
-         edgeList.add(new Pair<>(0,new Pair<>(1,10)));
-         edgeList.add(new Pair<>(0,new Pair<>(2,5)));
-         edgeList.add(new Pair<>(1,new Pair<>(3,7)));
-         edgeList.add(new Pair<>(2,new Pair<>(3,1)));
-         edgeList.add(new Pair<>(2,new Pair<>(4,2)));
-         edgeList.add(new Pair<>(4,new Pair<>(1,3)));
+        graph.setInitialSize(1000);
 
-        Kruskal<Integer,Integer> kruskal = new Kruskal<>(edgeList, 5);
+        List<Pair<Integer,Pair<Integer,Integer>>> edges = SimulateGraph.generateTestCase();
 
-        kruskal.findMST();
+        for (Pair<Integer, Pair<Integer, Integer>> edge : edges) {
+            graph.addEdge(edge.getFirst() - 1,edge.getSecond().getFirst() - 1,edge.getSecond().getSecond());
+        }
 
-        List<Pair<Integer,Integer>> mst = kruskal.getMst();
+        Dijkstra<Integer, Integer> dijkstra = new Dijkstra<>(graph.getGraph());
 
-        System.out.println(mst);
-        System.out.println(kruskal.getMstValue());
+        dijkstra.SSSPDijkstra(0);
+
+        for(int i = 1; i< 1000; i++){
+            System.out.println("shortest path from 0 to "+i+": "+dijkstra.shortestPathTo(i));
+        }
 
     }
 }

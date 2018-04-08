@@ -6,6 +6,7 @@ import java.util.function.Consumer;
 class LinkedListIterator<T> implements Iterator<T> {
 
     private Node head;
+    private Node current;
 
     public LinkedListIterator(Node head) {
         this.head = head;
@@ -13,7 +14,7 @@ class LinkedListIterator<T> implements Iterator<T> {
 
     @Override
     public void remove() {
-
+        throw new UnsupportedOperationException("remove not supported");
     }
 
     @Override
@@ -29,6 +30,7 @@ class LinkedListIterator<T> implements Iterator<T> {
     @Override
     public T next() {
         T data = (T)head.getData();
+        current = head;
         head = head.next;
         return data;
     }
