@@ -9,6 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
 
+@SuppressWarnings("unchecked")
 public final class Dijkstra<T extends Number, E extends Number> {
 
     private List<LinkedList<Pair<T,E>>> graph;
@@ -24,6 +25,11 @@ public final class Dijkstra<T extends Number, E extends Number> {
         }
     }
 
+    /**
+     * Greedy Paradigm
+     * Using Binary Min Heap
+     * @param start vertex
+     */
     public void SSSPDijkstra(T start) {
         this.pq.add(new Pair<>(start,(E)(Number)Constants.ZERO));
         this.distances.set(start.intValue(), (E)(Number)Constants.ZERO);

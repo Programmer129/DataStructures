@@ -16,17 +16,17 @@ public class SimulateGraph {
 
         Random random = new Random();
 
-        for(int i = 0; i < 10000; i++){
+        for(int i = 0; i < 200000; i++){
             int a = random.nextInt(1000) + 1;
             int b = random.nextInt(1000) + 1;
-            int w = random.nextInt(20000)+1;
+            int w = random.nextInt(500)+1;
             if(a != b){
                 if(a > b){
                     int tmp = a^b;
                     a = b;
                     b = tmp^a;
                 }
-                set.add(new Pair<>(a,new Pair<>(b,w)));
+                set.add(new Pair<>(a - 1,new Pair<>(b - 1,w)));
             }
         }
 

@@ -6,9 +6,11 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+@SuppressWarnings("unchecked")
 public class WeithedGraph<T extends Number,E extends Number>{
 
     private List<LinkedList<Pair<T,E>>> graph = new ArrayList<>();
+    private List<Pair<T,Pair<T,E>>> edgeList = new ArrayList<>();
     private int initialSize;
 
     private WeithedGraph(){ }
@@ -40,10 +42,11 @@ public class WeithedGraph<T extends Number,E extends Number>{
         return rGraph;
     }
 
-    // graph is undirect
+    // graph is direct
     public void addEdge(T a, T b, E w){
+        this.edgeList.add(new Pair<>(a,new Pair<>(b,w)));
         this.graph.get(a.intValue()).add(new Pair<>(b,w));
-        this.graph.get(b.intValue()).add(new Pair<>(a,w));
+//        this.graph.get(b.intValue()).add(new Pair<>(a,w));
     }
 
     public void printGraph(){
@@ -54,6 +57,10 @@ public class WeithedGraph<T extends Number,E extends Number>{
             }
             System.out.println("]");
         }
+    }
+
+    public List<Pair<T,Pair<T,E>>> getEdgeList(){
+        return this.edgeList;
     }
 
 }
