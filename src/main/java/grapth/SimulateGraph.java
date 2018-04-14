@@ -17,7 +17,7 @@ public class SimulateGraph {
 
         Random random = new Random();
 
-        for(int i = 0; i < 10000000; i++){
+        for(int i = 0; i < 100000; i++){
             int a = random.nextInt(2000) + 1;
             int b = random.nextInt(2000) + 1;
             int w = random.nextInt(1000)+1;

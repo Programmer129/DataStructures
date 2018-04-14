@@ -5,6 +5,8 @@ import grapth.Pair;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @SuppressWarnings("unchecked")
 public class WeithedGraph<T extends Number,E extends Number>{
@@ -61,6 +63,11 @@ public class WeithedGraph<T extends Number,E extends Number>{
 
     public List<Pair<T,Pair<T,E>>> getEdgeList(){
         return this.edgeList;
+    }
+
+    public static <T,E> List<Set<T>> toGraph(List<LinkedList<Pair<T,E>>> graph) {
+        return graph.stream().map(list -> list.stream()
+                .map(Pair::getFirst).collect(Collectors.toSet())).collect(Collectors.toList());
     }
 
 }

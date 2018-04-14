@@ -2,6 +2,7 @@ package grapth.graph_tracersals;
 
 import grapth.Constants;
 import grapth.Pair;
+import grapth.weighted_graph.WeithedGraph;
 import stack.Stack;
 
 import java.util.ArrayList;
@@ -9,9 +10,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
+@SuppressWarnings("unchecked")
 public final class DepthFirstSearch<T extends Number, E extends Number> {
 
-    private List<LinkedList<Pair<T,E>>> weightedGraph;
     private List<Set<T>> graph;
     private List<Boolean> visited;
     private List<T> parents;
@@ -19,7 +20,7 @@ public final class DepthFirstSearch<T extends Number, E extends Number> {
     private List<T> scc;
     private List<T> ccNumberNodes;
     private Integer counter;
-    private boolean isWeighted;
+    private Boolean isWeighted;
 
     private void init() {
         int size = this.graph.size();
@@ -28,6 +29,7 @@ public final class DepthFirstSearch<T extends Number, E extends Number> {
         this.dfsStack = new Stack(size);
         this.scc = new ArrayList<>(size);
         this.ccNumberNodes = new ArrayList<>(size);
+        this.counter = 0;
         for(int i = 0; i< size; i++){
             this.parents.add(i, (T)(Number) Constants.INITIAL_VALUE);
             this.visited.add(i, false);
@@ -41,8 +43,11 @@ public final class DepthFirstSearch<T extends Number, E extends Number> {
     }
 
     public DepthFirstSearch(List<LinkedList<Pair<T,E>>> weightedGraph, boolean isWeighted){
-        this.weightedGraph = weightedGraph;
         this.isWeighted = isWeighted;
+        if(isWeighted) {
+            this.graph = WeithedGraph.toGraph(weightedGraph);
+        }
+        this.init();
     }
 
     private void dfsInit(T s) {
@@ -58,15 +63,14 @@ public final class DepthFirstSearch<T extends Number, E extends Number> {
 
     public synchronized void dfs(T s) {
         this.init();
-        s = (T)(Number)(s.intValue() - 1);
         dfsInit(s);
     }
 
     public synchronized void dfsForScc(T s, Stack stack, List<Boolean> visited) {
         visited.set(s.intValue(), true);
-        for (Pair<T, E> node : this.weightedGraph.get(s.intValue())) {
-            if(!visited.get(node.getFirst().intValue())){
-                dfsForScc(node.getFirst(), stack, visited);
+        for (T node : this.graph.get(s.intValue())) {
+            if(!visited.get(node.intValue())){
+                dfsForScc(node, stack, visited);
             }
         }
         stack.push(s);
