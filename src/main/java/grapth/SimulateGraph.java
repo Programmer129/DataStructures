@@ -13,20 +13,24 @@ public class SimulateGraph {
 
     public static List<Pair<Integer,Pair<Integer,Integer>>> generateTestCase() {
         Set<Pair<Integer, Pair<Integer,Integer>>> set = new HashSet<>();
+        Map<Integer, Integer> occ = new HashMap<>();
 
         Random random = new Random();
 
-        for(int i = 0; i < 200000; i++){
-            int a = random.nextInt(1000) + 1;
-            int b = random.nextInt(1000) + 1;
-            int w = random.nextInt(500)+1;
+        for(int i = 0; i < 10000000; i++){
+            int a = random.nextInt(2000) + 1;
+            int b = random.nextInt(2000) + 1;
+            int w = random.nextInt(1000)+1;
             if(a != b){
                 if(a > b){
                     int tmp = a^b;
                     a = b;
                     b = tmp^a;
                 }
-                set.add(new Pair<>(a - 1,new Pair<>(b - 1,w)));
+                if(!occ.containsValue(b)){
+                    occ.put(a,b);
+                    set.add(new Pair<>(a - 1,new Pair<>(b - 1,w)));
+                }
             }
         }
 

@@ -1,14 +1,17 @@
 package grapth.graph_tracersals;
 
 import grapth.Constants;
+import grapth.Pair;
 import stack.Stack;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-public final class DepthFirstSearch<T extends Number> {
+public final class DepthFirstSearch<T extends Number, E extends Number> {
 
+    private List<LinkedList<Pair<T,E>>> weightedGraph;
     private List<Set<T>> graph;
     private List<Boolean> visited;
     private List<T> parents;
@@ -16,6 +19,7 @@ public final class DepthFirstSearch<T extends Number> {
     private List<T> scc;
     private List<T> ccNumberNodes;
     private Integer counter;
+    private boolean isWeighted;
 
     private void init() {
         int size = this.graph.size();
@@ -36,6 +40,11 @@ public final class DepthFirstSearch<T extends Number> {
         this.init();
     }
 
+    public DepthFirstSearch(List<LinkedList<Pair<T,E>>> weightedGraph, boolean isWeighted){
+        this.weightedGraph = weightedGraph;
+        this.isWeighted = isWeighted;
+    }
+
     private void dfsInit(T s) {
         this.visited.set(s.intValue(), true);
         this.counter++;
@@ -53,11 +62,11 @@ public final class DepthFirstSearch<T extends Number> {
         dfsInit(s);
     }
 
-    public synchronized void dfsForScc(T s, Stack stack, List<Boolean> visited){
+    public synchronized void dfsForScc(T s, Stack stack, List<Boolean> visited) {
         visited.set(s.intValue(), true);
-        for(T node: this.graph.get(s.intValue())){
-            if(!visited.get(node.intValue())){
-                dfsForScc(node, stack, visited);
+        for (Pair<T, E> node : this.weightedGraph.get(s.intValue())) {
+            if(!visited.get(node.getFirst().intValue())){
+                dfsForScc(node.getFirst(), stack, visited);
             }
         }
         stack.push(s);

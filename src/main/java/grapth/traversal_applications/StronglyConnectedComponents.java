@@ -8,9 +8,9 @@ import stack.Stack;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StronglyConnectedComponents<T extends Number> {
+public class StronglyConnectedComponents<T extends Number, E extends Number> {
 
-    private DepthFirstSearch<T> depthFirstSearch;
+    private DepthFirstSearch<T, E> depthFirstSearch;
     private Graph<T> graph;
     private List<T> sccUtil;
 

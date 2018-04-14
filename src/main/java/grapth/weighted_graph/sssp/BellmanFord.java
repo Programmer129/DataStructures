@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 @SuppressWarnings("unchecked")
-public class BellmanFord<T extends Number,E extends Number> {
+public final class BellmanFord<T extends Number,E extends Number> {
 
     private List<Pair<T,Pair<T,E>>> edgeList;
     private List<E> distances;
