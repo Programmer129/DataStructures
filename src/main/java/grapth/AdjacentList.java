@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+@SuppressWarnings("unchecked")
 public final class AdjacentList<T extends Number> implements Graph<T> {
 
     private List<Set<T>> graph;
@@ -35,10 +36,8 @@ public final class AdjacentList<T extends Number> implements Graph<T> {
         Graph<T> rGraph = AdjacentList.getInstance();
         rGraph.setInitialSize(this.graph.size());
         for(int i=0; i< this.graph.size();i++){
-            Set<T> set = this.graph.get(i);
-            for (T t : set) {
-                rGraph.addEdge((T)(Number)(t.intValue()+1),(T)(Number)(i+1));
-            }
+            final int I = i;
+            this.graph.get(i).forEach(t -> rGraph.addEdge((T)(Number)(t.intValue()+1),(T)(Number)(I+1)));
         }
         return rGraph;
     }

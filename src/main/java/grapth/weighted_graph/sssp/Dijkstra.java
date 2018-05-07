@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 import java.util.PriorityQueue;
 
 @SuppressWarnings("unchecked")
@@ -35,7 +36,7 @@ public final class Dijkstra<T extends Number, E extends Number> {
         this.distances.set(start.intValue(), (E)(Number)Constants.ZERO);
         while(!pq.isEmpty()){
             Pair<T,E> current = pq.poll();
-            for (Pair<T, E> tePair : this.graph.get(current.getFirst().intValue())) {
+            for (Pair<T, E> tePair : this.graph.get(Objects.requireNonNull(current).getFirst().intValue())) {
                 if(current.getSecond().intValue() + tePair.getSecond().intValue()
                         < this.distances.get(tePair.getFirst().intValue()).intValue()){
                     this.distances.set(tePair.getFirst().intValue(), (E)(Number)(current.getSecond().intValue() + tePair.getSecond().intValue()));
