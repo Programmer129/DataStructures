@@ -1,24 +1,22 @@
-import grapth.informed_search.EightPuzzleBfs;
+import backtracking.SudokuSolver;
 
 public class Main {
 
     public static void main(String[] args) {
-
-        int [][] initial = {
-                {1,2,3},
-                {5,6,0},
-                {7,8,4}
-        };
-
-        int [][] fin = {
-                {1,2,3},
-                {4,5,6},
-                {7,8,0}
-        };
-
-        EightPuzzleBfs bfs = new EightPuzzleBfs(initial, fin);
-
-        bfs.informedBfs(1,2);
-
+        int [][] grid =
+                {
+                        {9,0,0,8,0,1,0,6,5},
+                        {0,0,1,2,6,5,3,8,9},
+                        {0,6,0,9,0,7,4,1,2},
+                        {3,1,6,5,2,4,9,0,8},
+                        {0,8,0,1,9,0,0,0,0},
+                        {2,4,9,6,0,8,5,3,0},
+                        {0,9,3,4,0,2,0,5,7},
+                        {1,5,4,0,0,9,6,2,3},
+                        {7,2,8,3,0,0,1,9,4}
+                };
+        SudokuSolver sudokuSolver = new SudokuSolver(grid);
+        sudokuSolver.solve();
+        sudokuSolver.printGrid();
     }
 }

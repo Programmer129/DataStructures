@@ -5,17 +5,17 @@ import grapth.Constants;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+import static grapth.Constants.MOVES;
+import static grapth.Constants.ONE;
+import static grapth.Constants.SIZE;
+import static grapth.Constants.row;
+import static grapth.Constants.column;
+
 public class EightPuzzleBfs {
 
     private int [][] initialMatrix;
     private int [][] finalMatrix;
     private PriorityQueue<StateNode> pq;
-
-    private static final int SIZE = 3;
-    private static final int MOVES = 4;
-    private static final int ONE = 1;
-    private static final int [] row = {1,0,-1,0};
-    private static final int [] column = {0,-1,0,1};
 
     public EightPuzzleBfs(int[][] initialMatrix, int[][] finalMatrix) {
         this.initialMatrix = initialMatrix;
