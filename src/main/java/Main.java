@@ -1,5 +1,3 @@
-import backtracking.sudoku.SudokuSolver;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -15,8 +13,5 @@ public class Main {
                         {0,0,0,0,9,0,0,4,0},
                         {0,0,6,0,0,3,0,0,1}
                 };
-        SudokuSolver sudokuSolver = new SudokuSolver(grid);
-        sudokuSolver.solve();
-        sudokuSolver.printGrid();
     }
 }

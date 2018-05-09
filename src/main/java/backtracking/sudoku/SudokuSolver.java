@@ -2,21 +2,24 @@ package backtracking.sudoku;
 
 import grapth.Pair;
 
+import java.util.Observable;
+
 import static grapth.Constants.NINE;
 import static grapth.Constants.ONE;
 import static grapth.Constants.TREE;
 import static grapth.Constants.ZERO;
 
 @SuppressWarnings("unchecked")
-public class SudokuSolver {
+public class SudokuSolver extends Observable {
 
     private int [][] grid;
+    public int [] messige = new int[3];
 
     public SudokuSolver(int [][] grid) {
         this.grid = grid;
     }
 
-    public boolean solve() {
+    public boolean solve() throws InterruptedException {
 
         Pair<Integer, Integer> pair = new Pair<>(ZERO, ZERO);
 
@@ -27,6 +30,12 @@ public class SudokuSolver {
         for(int start = ONE; start <= NINE; start++) {
             if (isValid(pair.getFirst(), pair.getSecond(), start)) {
                 grid[pair.getFirst()][pair.getSecond()] = start;
+                this.messige[0] = pair.getFirst();
+                this.messige[1] = pair.getSecond();
+                this.messige[2] = start;
+                setChanged();
+                notifyObservers(this.messige);
+                Thread.sleep(1000);
                 if (solve()) {
                     return true;
                 }

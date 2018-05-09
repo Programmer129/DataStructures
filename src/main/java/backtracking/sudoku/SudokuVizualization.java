@@ -11,45 +11,36 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class SudokuVizualization extends Application {
+import java.util.Observable;
+import java.util.Observer;
+
+public class SudokuVizualization extends Application implements Observer {
 
     private TextField [][] textFields = new TextField[9][9];
+    private int [][] grid = new int[9][9];
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws InterruptedException {
+        this.textFields = this.gridToField();
 
         FlowPane flowPane = new FlowPane();
         GridPane board = new GridPane();
-
         Label label = new Label("Sudoku Solver");
+
         label.setFont(Font.font(20));
         flowPane.getChildren().add(label);
         flowPane.setAlignment(Pos.CENTER);
 
-        for (int col = 0; col < 11; col++) {
-            for (int row = 0; row < 13; row++) {
+        for (int col = 0, c = 0; col < 9; col++) {
+            for (int row = 0, r = 0; row < 9; row++) {
                 StackPane cell = new StackPane();
-                TextField textField = new TextField();
+                TextField textField = this.textFields[col][row];
 
                 textField.setMaxWidth(50);
                 cell.getChildren().add(textField);
-
-                if(row == 3 || row == 8) {
-                    row++;
-                    board.add(new Label(" "), col, row);
-                    continue;
-                }
-
                 board.add(cell, col, row);
             }
-            if(col == 2 || col == 6) {
-                col++;
-                for (int i = 0; i < 11; i++) {
-                    board.add(new Label(" "), col, i);
-                }
-            }
         }
-
 
         flowPane.getChildren().add(board);
         Scene scene = new Scene(flowPane);
@@ -58,5 +49,47 @@ public class SudokuVizualization extends Application {
         primaryStage.setHeight(400);
         primaryStage.setScene(scene);
         primaryStage.show();
+
+        SudokuSolver sudokuSolver = new SudokuSolver(this.grid);
+
+        sudokuSolver.addObserver(this);
+
+        sudokuSolver.solve();
+    }
+
+    private int [][] compute() {
+       int [][] grid =
+                {
+                        {0,1,0,0,0,2,0,0,9},
+                        {8,0,0,0,0,0,0,0,0},
+                        {0,0,4,0,6,0,0,5,0},
+                        {9,0,0,5,0,0,0,8,0},
+                        {0,2,0,0,0,0,7,0,0},
+                        {0,0,3,0,0,1,0,0,6},
+                        {0,5,0,7,0,0,2,0,0},
+                        {0,0,0,0,9,0,0,4,0},
+                        {0,0,6,0,0,3,0,0,1}
+                };
+       this.grid = grid;
+        return this.grid;
+    }
+
+    private TextField[][] gridToField() {
+        TextField[][] matrix = new TextField[9][9];
+        int [][] grid = this.compute();
+
+        for(int row = 0; row < 9; row++) {
+            for(int col = 0; col < 9; col++) {
+                matrix[row][col] = new TextField();
+                matrix[row][col].setText(grid[row][col] == 0 ? " " : String.valueOf(grid[row][col]));
+            }
+        }
+        return matrix;
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        int [] arr = (int[])arg;
+        System.out.println(arr[0]);
     }
 }
