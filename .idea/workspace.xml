@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3e49c156-3319-4f75-8da0-e2eee03c3238" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuSolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuVizualization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuVizualization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/backtracking/sudoku/SudokuSolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backtracking/sudoku/SudokuSolver.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/backtracking/sudoku/SudokuVizualization.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backtracking/sudoku/SudokuVizualization.class" afterDir="false" />
     </list>
@@ -19,12 +17,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="225">
       <file leaf-file-name="SudokuVizualization.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuVizualization.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
+            <state relative-caret-position="476">
+              <caret line="101" column="32" lean-forward="true" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,8 +33,8 @@
       <file leaf-file-name="SudokuSolver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuSolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+            <state relative-caret-position="180">
+              <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,8 +124,8 @@
         <option value="$PROJECT_DIR$/src/main/java/SudokuSolver.java" />
         <option value="$PROJECT_DIR$/src/main/java/backtracking/SudokuSolver.java" />
         <option value="$PROJECT_DIR$/src/main/java/backtracking/sudoku/sudoku.css" />
-        <option value="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuSolver.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuSolver.java" />
         <option value="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuVizualization.java" />
       </list>
     </option>
@@ -228,8 +226,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -363,7 +361,8 @@
       <workItem from="1525717722606" duration="640000" />
       <workItem from="1525718365310" duration="10423000" />
       <workItem from="1525801194601" duration="4874000" />
-      <workItem from="1525900833109" duration="3892000" />
+      <workItem from="1525900833109" duration="4846000" />
+      <workItem from="1525934654090" duration="2140000" />
     </task>
     <servers />
   </component>
@@ -400,7 +399,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146457000" />
+    <option name="totallyTimeSpent" value="149551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-17" width="1368" height="786" extended-state="6" />
@@ -416,7 +415,7 @@
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.329927" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34452555" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34452555" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -476,7 +475,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/strings/algorithm_statistic/StringMatchingPerformance.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/strings/multithreading/SingleThreadSingleAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-522">
@@ -704,16 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -721,10 +709,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///opt/jdk1.8.0_171/src.zip!/java/util/Observer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="45" column="42" lean-forward="true" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuVizualization.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
+        <state relative-caret-position="476">
+          <caret line="101" column="32" lean-forward="true" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

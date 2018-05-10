@@ -10,16 +10,16 @@ import static grapth.Constants.TREE;
 import static grapth.Constants.ZERO;
 
 @SuppressWarnings("unchecked")
-public class SudokuSolver extends Observable {
+class SudokuSolver extends Observable {
 
     private int [][] grid;
-    public int [] messige = new int[3];
+    private int [] messige = new int[3];
 
-    public SudokuSolver(int [][] grid) {
+    SudokuSolver(int[][] grid) {
         this.grid = grid;
     }
 
-    public boolean solve() throws InterruptedException {
+    boolean solve() throws InterruptedException {
 
         Pair<Integer, Integer> pair = new Pair<>(ZERO, ZERO);
 
@@ -35,7 +35,7 @@ public class SudokuSolver extends Observable {
                 this.messige[2] = start;
                 setChanged();
                 notifyObservers(this.messige);
-                Thread.sleep(1000);
+                Thread.sleep(500);
                 if (solve()) {
                     return true;
                 }
