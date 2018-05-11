@@ -12,6 +12,11 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -19,24 +24,29 @@ public class SudokuVizualization extends Application implements Observer {
 
     private TextField [][] textFields = new TextField[9][9];
     private int [][] grid = new int[9][9];
-    private FlowPane flowPane;
+
+    private static final String PATH = "/home/levani/IdeaProjects/dataStructures/src/main/resources/sudoku.txt";
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage)  {
 
         Thread thread = new Thread(() -> {
-           SudokuSolver sudokuSolver = new SudokuSolver(this.grid);
-           sudokuSolver.addObserver(this);
+            SudokuSolver sudokuSolver = new SudokuSolver(this.grid);
+            sudokuSolver.addObserver(this);
             try {
-                sudokuSolver.solve();
+                sudokuSolver.sovler();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         });
 
-        this.textFields = this.gridToField();
+        try {
+            this.textFields = this.gridToField();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        flowPane = new FlowPane();
+        FlowPane flowPane = new FlowPane();
         GridPane board = new GridPane();
         Label label = new Label("Sudoku Solver");
 
@@ -65,26 +75,28 @@ public class SudokuVizualization extends Application implements Observer {
         thread.start();
     }
 
-    private int [][] compute() {
-       int [][] grid =
-                {
-                        {2,0,0,0,0,0,0,0,6},
-                        {8,6,7,9,3,1,2,5,4},
-                        {4,0,0,5,0,6,0,0,3},
-                        {0,3,8,2,1,4,9,7,0},
-                        {0,7,0,6,8,9,0,1,0},
-                        {9,1,0,0,0,0,0,4,8},
-                        {1,0,6,0,5,0,4,0,9},
-                        {3,4,9,1,6,8,5,2,7},
-                        {7,0,5,0,9,0,8,0,1}
-                };
-        this.grid = grid;
-        return this.grid;
+    private int [][] loadData() throws IOException {
+        File file = new File(PATH);
+        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
+        String line;
+        int row = 0;
+        int [][] result = new int[9][9];
+        while((line = br.readLine()) != null) {
+            String[] split = line.split(" ");
+            result[row] = new int[9];
+            for(int col = 0; col < 9; col++) {
+                result[row][col] = Integer.valueOf(split[col]);
+            }
+            row++;
+        }
+
+        return result;
     }
 
-    private TextField[][] gridToField() {
+    private TextField[][] gridToField() throws IOException {
         TextField[][] matrix = new TextField[9][9];
-        int [][] grid = this.compute();
+        int [][] grid = this.loadData();
+        this.grid = grid;
 
         for(int row = 0; row < 9; row++) {
             for(int col = 0; col < 9; col++) {
@@ -99,6 +111,7 @@ public class SudokuVizualization extends Application implements Observer {
     public void update(Observable o, Object arg) {
         int [] arr = (int[])arg;
         this.textFields[arr[0]][arr[1]].setText(String.valueOf(arr[2]));
+        this.textFields[arr[0]][arr[1]].setStyle("-fx-text-fill: red;");
         this.textFields[arr[0]][arr[1]].fireEvent(new ActionEvent());
     }
 }

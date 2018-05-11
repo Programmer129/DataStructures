@@ -14,12 +14,13 @@ class SudokuSolver extends Observable {
 
     private int [][] grid;
     private int [] messige = new int[3];
+    private int step = 0;
 
     SudokuSolver(int[][] grid) {
         this.grid = grid;
     }
 
-    boolean solve() throws InterruptedException {
+    private boolean solve() throws InterruptedException {
 
         Pair<Integer, Integer> pair = new Pair<>(ZERO, ZERO);
 
@@ -35,7 +36,8 @@ class SudokuSolver extends Observable {
                 this.messige[2] = start;
                 setChanged();
                 notifyObservers(this.messige);
-                Thread.sleep(500);
+                System.out.println("step: "+ this.step++);
+                Thread.sleep(100);
                 if (solve()) {
                     return true;
                 }
@@ -43,6 +45,11 @@ class SudokuSolver extends Observable {
             }
         }
         return false;
+    }
+
+    boolean sovler() throws InterruptedException {
+        Thread.sleep(5000);
+        return solve();
     }
 
     private boolean isValid(int row, int column, int number) {
