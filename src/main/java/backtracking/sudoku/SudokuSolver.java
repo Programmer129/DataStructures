@@ -4,10 +4,10 @@ import grapth.Pair;
 
 import java.util.Observable;
 
-import static grapth.Constants.NINE;
-import static grapth.Constants.ONE;
-import static grapth.Constants.TREE;
-import static grapth.Constants.ZERO;
+import static common.Constants.NINE;
+import static common.Constants.ONE;
+import static common.Constants.TREE;
+import static common.Constants.ZERO;
 
 @SuppressWarnings("unchecked")
 class SudokuSolver extends Observable {
@@ -20,7 +20,7 @@ class SudokuSolver extends Observable {
         this.grid = grid;
     }
 
-    private boolean solve() throws InterruptedException {
+    private synchronized boolean solve() throws InterruptedException {
 
         Pair<Integer, Integer> pair = new Pair<>(ZERO, ZERO);
 
@@ -47,8 +47,8 @@ class SudokuSolver extends Observable {
         return false;
     }
 
-    boolean sovler() throws InterruptedException {
-        Thread.sleep(5000);
+    synchronized boolean sovler() throws InterruptedException {
+        Thread.sleep(3000);
         return solve();
     }
 

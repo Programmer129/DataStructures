@@ -1,15 +1,15 @@
 package grapth.informed_search;
 
-import grapth.Constants;
+import common.Constants;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-import static grapth.Constants.MOVES;
-import static grapth.Constants.ONE;
-import static grapth.Constants.SIZE;
-import static grapth.Constants.row;
-import static grapth.Constants.column;
+import static common.Constants.MOVES;
+import static common.Constants.ONE;
+import static common.Constants.SIZE;
+import static common.Constants.row;
+import static common.Constants.column;
 
 public class EightPuzzleBfs {
 

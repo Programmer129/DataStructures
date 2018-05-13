@@ -1,6 +1,6 @@
 package grapth.weighted_graph.minimum_spaning_tree;
 
-import grapth.Constants;
+import common.Constants;
 import grapth.Pair;
 import union_find.UnionFind;
 

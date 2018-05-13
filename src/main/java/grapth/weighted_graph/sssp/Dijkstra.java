@@ -1,6 +1,6 @@
 package grapth.weighted_graph.sssp;
 
-import grapth.Constants;
+import common.Constants;
 import grapth.Pair;
 
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
 package grapth.graph_tracersals;
 
-import grapth.Constants;
+import common.Constants;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

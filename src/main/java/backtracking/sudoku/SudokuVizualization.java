@@ -1,5 +1,6 @@
 package backtracking.sudoku;
 
+import backtracking.Recurse;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.geometry.Pos;

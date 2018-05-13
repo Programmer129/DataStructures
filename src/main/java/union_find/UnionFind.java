@@ -1,6 +1,6 @@
 package union_find;
 
-import grapth.Constants;
+import common.Constants;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package grapth;
+package common;
 
 public final class Constants {
 
@@ -11,6 +11,7 @@ public final class Constants {
     public static final int ONE = 1;
     public static final int NINE = 9;
     public static final int TREE = 3;
+    public static final int EIGHT = 8;
     public static final int [] row = {1,0,-1,0};
     public static final int [] column = {0,-1,0,1};
 
