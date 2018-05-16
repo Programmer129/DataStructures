@@ -1,6 +1,6 @@
 package backtracking.sudoku;
 
-import backtracking.Recurse;
+import common.Mapper;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.geometry.Pos;
@@ -13,13 +13,16 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class SudokuVizualization extends Application implements Observer {
 
@@ -77,21 +80,12 @@ public class SudokuVizualization extends Application implements Observer {
     }
 
     private int [][] loadData() throws IOException {
-        File file = new File(PATH);
-        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
-        String line;
-        int row = 0;
-        int [][] result = new int[9][9];
-        while((line = br.readLine()) != null) {
-            String[] split = line.split(" ");
-            result[row] = new int[9];
-            for(int col = 0; col < 9; col++) {
-                result[row][col] = Integer.valueOf(split[col]);
-            }
-            row++;
-        }
+        Path path = Paths.get(PATH);
+        Stream<String> stream = Files.lines(path);
+        List<List<Integer>> result = stream.map(line -> Arrays.stream(line.split(" "))
+                .map(Integer::valueOf).collect(Collectors.toList())).collect(Collectors.toList());
 
-        return result;
+        return Mapper.toMatrix(result);
     }
 
     private TextField[][] gridToField() throws IOException {

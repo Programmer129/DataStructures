@@ -1,12 +1,15 @@
-package backtracking;
+package backtracking.knight_tour_problem;
+
+import grapth.Pair;
 
 import java.util.Arrays;
+import java.util.Observable;
 
 import static common.Constants.EIGHT;
 import static common.Constants.ZERO;
 
 @SuppressWarnings("unchecked")
-public class KnightTourProblem {
+public class KnightTourProblem extends Observable {
 
     private boolean [][] board;
     private int [][] visualise;
@@ -31,7 +34,7 @@ public class KnightTourProblem {
         this.visualise[this.knightX][this.knightY] = moves;
     }
 
-    private boolean solve(int x, int y, int moves) {
+    private boolean solve(int x, int y, int moves) throws InterruptedException {
         if(!checkUnvisitedCell()) {
             return true;
         }
@@ -43,6 +46,9 @@ public class KnightTourProblem {
             int nextY = y + moveY[move];
             if(nextX >=0 && nextX < EIGHT && nextY >=0 && nextY < EIGHT && !this.board[nextX][nextY]) {
                 this.board[nextX][nextY] = true;
+                setChanged();
+                notifyObservers(new Pair<>(nextX, nextY));
+                Thread.sleep(100);
                 this.visualise[nextX][nextY] = moves + 1;
                 if (solve(nextX, nextY, moves + 1)) {
                     return true;
@@ -53,8 +59,10 @@ public class KnightTourProblem {
         return false;
     }
 
-    public boolean sovler() {
-        return solve(this.knightX, this.knightY, this.moves);
+    public void sovler() throws InterruptedException {
+        Thread.sleep(3000);
+        boolean solve = solve(this.knightX, this.knightY, this.moves);
+        System.out.println(solve ? "Done" : "No solution");
     }
 
     private boolean checkUnvisitedCell() {

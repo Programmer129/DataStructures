@@ -2,31 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e49c156-3319-4f75-8da0-e2eee03c3238" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/backtracking/KnightTourProblem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/backtracking/Recurse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourVisualisation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/common/Mapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/backtracking/KnightTourProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/backtracking/Recurse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backtracking/Recurse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuVizualization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuVizualization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grapth/Constants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grapth/graph_tracersals/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grapth/graph_tracersals/BreadthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grapth/graph_tracersals/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grapth/graph_tracersals/DepthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grapth/informed_search/EightPuzzleBfs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grapth/informed_search/EightPuzzleBfs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/minimum_spaning_tree/Kruskal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/minimum_spaning_tree/Kruskal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/sssp/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/sssp/Dijkstra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/union_find/UnionFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/union_find/UnionFind.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sudoku.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sudoku.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backtracking/sudoku/SudokuSolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backtracking/sudoku/SudokuSolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backtracking/KnightTourProblem.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/backtracking/sudoku/SudokuVizualization.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backtracking/sudoku/SudokuVizualization.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/grapth/Constants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/grapth/graph_tracersals/BreadthFirstSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/grapth/graph_tracersals/BreadthFirstSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/grapth/graph_tracersals/DepthFirstSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/grapth/graph_tracersals/DepthFirstSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/grapth/informed_search/EightPuzzleBfs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/grapth/informed_search/EightPuzzleBfs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/grapth/weighted_graph/minimum_spaning_tree/Kruskal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/grapth/weighted_graph/minimum_spaning_tree/Kruskal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/grapth/weighted_graph/sssp/Dijkstra.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/grapth/weighted_graph/sssp/Dijkstra.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sudoku.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sudoku.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/union_find/UnionFind.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/union_find/UnionFind.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,26 +23,27 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="225">
-      <file leaf-file-name="KnightTourProblem.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/KnightTourProblem.java">
+    <leaf>
+      <file leaf-file-name="KnightTourVisualisation.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourVisualisation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="76" column="56" selection-start-line="76" selection-start-column="56" selection-end-line="76" selection-end-column="56" />
+            <state relative-caret-position="521">
+              <caret line="127" column="47" selection-start-line="127" selection-start-column="47" selection-end-line="127" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1451#1452#0" expanded="true" />
-                <element signature="e#1507#1508#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <file leaf-file-name="KnightTourProblem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourProblem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="72" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
+            <state relative-caret-position="135">
+              <caret line="49" column="55" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,8 +54,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -87,6 +74,8 @@
       <find>dfsInit</find>
       <find>delete</find>
       <find>grid</find>
+      <find>addO</find>
+      <find>-&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -100,10 +89,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/tree/ThreadSafe.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tree/Color.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tree/Node.java" />
-        <option value="$PROJECT_DIR$/src/main/java/speedTest/TreeTime.java" />
         <option value="$PROJECT_DIR$/src/test/java/TrieNodeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/strings/TrieNode.java" />
         <option value="$PROJECT_DIR$/src/test/java/BinarySearchTest.java" />
@@ -147,10 +132,14 @@
         <option value="$PROJECT_DIR$/src/main/resources/sudoku.txt" />
         <option value="$PROJECT_DIR$/src/main/java/common/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/backtracking/Recurse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuSolver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuVizualization.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/backtracking/KnightTourProblem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/Mapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuVizualization.java" />
+        <option value="$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/ChessBoard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuSolver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourProblem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourVisualisation.java" />
       </list>
     </option>
   </component>
@@ -171,10 +160,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="38" />
-    <option name="width" value="1346" />
-    <option name="height" value="710" />
+    <option name="y" value="-3" />
+    <option name="width" value="1366" />
+    <option name="height" value="771" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -204,9 +192,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,7 +232,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="backtracking" type="462c0819:PsiDirectoryNode" />
-              <item name="sudoku" type="462c0819:PsiDirectoryNode" />
+              <item name="knight_tour_problem" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
@@ -255,12 +240,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="backtracking" type="462c0819:PsiDirectoryNode" />
+              <item name="sudoku" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataStructures" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -270,8 +266,8 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -290,9 +286,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.KnightTourVisualisation">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration name="KnightTourVisualisation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="backtracking.knight_tour_problem.KnightTourVisualisation" />
+      <module name="dataStructures" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="backtracking.knight_tour_problem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -367,9 +374,11 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.SudokuVizualization" />
+      <item itemvalue="Application.KnightTourVisualisation" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.KnightTourVisualisation" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.SudokuVizualization" />
       </list>
@@ -400,7 +409,12 @@
       <workItem from="1526118678843" duration="2183000" />
       <workItem from="1526151805385" duration="36000" />
       <workItem from="1526206969918" duration="10147000" />
-      <workItem from="1526218671297" duration="940000" />
+      <workItem from="1526218671297" duration="1138000" />
+      <workItem from="1526309431120" duration="5877000" />
+      <workItem from="1526420071286" duration="2457000" />
+      <workItem from="1526478214443" duration="105000" />
+      <workItem from="1526478357673" duration="2279000" />
+      <workItem from="1526484984246" duration="8365000" />
     </task>
     <servers />
   </component>
@@ -437,42 +451,53 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170199000" />
+    <option name="totallyTimeSpent" value="189480000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-17" width="1368" height="786" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info anchor="bottom" id="Docker" order="11" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39854014" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329927" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32846716" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.329927" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34452555" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34452555" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="3" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23572475" />
-      <window_info anchor="bottom" id="Docker" order="11" />
-      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="bottom" id="Run with VisualVM" order="12" weight="0.329927" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="SciView" order="7" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39854014" />
+      <window_info anchor="bottom" id="Debug with VisualVM" order="12" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,10 +538,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/AdjacentGraph.java" />
-    <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/util/ArrayDeque.java" />
-    <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/util/Queue.java" />
-    <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/lang/Number.java" />
     <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/util/List.java" />
     <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/util/Objects.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/tree/BinarySearchTree.java">
@@ -697,13 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sudoku.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -718,49 +732,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///opt/jdk1.8.0_171/src.zip!/java/util/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/Recurse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#459#460#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuVizualization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -771,21 +746,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/Recurse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="72" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
+        <state relative-caret-position="30">
+          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/KnightTourProblem.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sudoku.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="76" column="56" selection-start-line="76" selection-start-column="56" selection-end-line="76" selection-end-column="56" />
+        <state relative-caret-position="120">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/Mapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knight.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/ChessBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1451#1452#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuVizualization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-94">
+          <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourProblem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="49" column="55" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourVisualisation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="127" column="47" selection-start-line="127" selection-start-column="47" selection-end-line="127" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
