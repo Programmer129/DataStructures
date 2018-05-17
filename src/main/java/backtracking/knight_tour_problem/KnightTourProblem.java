@@ -3,6 +3,7 @@ package backtracking.knight_tour_problem;
 import grapth.Pair;
 
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Observable;
 
 import static common.Constants.EIGHT;
@@ -40,15 +41,16 @@ public class KnightTourProblem extends Observable {
         }
 
         this.step++;
+        log(step);
+        setChanged();
+        notifyObservers(new Pair<>(x, y));
+        Thread.sleep(500);
 
         for (int move = ZERO; move < EIGHT; move++) {
             int nextX = x + moveX[move];
             int nextY = y + moveY[move];
             if(nextX >=0 && nextX < EIGHT && nextY >=0 && nextY < EIGHT && !this.board[nextX][nextY]) {
                 this.board[nextX][nextY] = true;
-                setChanged();
-                notifyObservers(new Pair<>(nextX, nextY));
-                Thread.sleep(100);
                 this.visualise[nextX][nextY] = moves + 1;
                 if (solve(nextX, nextY, moves + 1)) {
                     return true;
@@ -87,5 +89,9 @@ public class KnightTourProblem extends Observable {
             }
             System.out.println();
         }
+    }
+
+    private synchronized void log(int step) {
+        System.out.println("running step: " + step +";   " + Calendar.getInstance().getTime());
     }
 }

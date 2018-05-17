@@ -2,6 +2,7 @@ package backtracking.knight_tour_problem;
 
 import grapth.Pair;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -23,25 +24,27 @@ public class KnightTourVisualisation extends Application implements Observer {
     private static final String PATH = "/home/levani/IdeaProjects/dataStructures/src/main/resources/knight.png";
 
     private GridPane board;
+    private Pair<Integer, Integer> pair;
+    private StackPane stackPane = new StackPane();
 
     @Override
-    public void start(Stage primaryStage) {
+    public synchronized void start(Stage primaryStage) {
 
         Thread thread = new Thread(() -> {
-           KnightTourProblem knightTourProblem = new KnightTourProblem(5, 5);
+           KnightTourProblem knightTourProblem = new KnightTourProblem(0, 0);
            knightTourProblem.addObserver(this);
             try {
                 knightTourProblem.sovler();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        });
+        }, "algorithm thread");
 
         board = new GridPane();
 
         drawBoard(board);
 
-        setKnight(board, 5, 5);
+        setKnight(board, 1, 0);
 
         Scene scene = new Scene(board);
 
@@ -112,19 +115,23 @@ public class KnightTourVisualisation extends Application implements Observer {
         }
     }
 
-    private void setKnight(GridPane board, int column, int row) {
+    private synchronized void setKnight(GridPane board, int column, int row) {
         Image image = new Image(Paths.get(PATH).toUri().toString());
         ImageView imageView = new ImageView(image);
         imageView.setFitHeight(50);
         imageView.setFitWidth(50);
 
-        board.add(imageView, 5, 5);
+        stackPane.getChildren().add(imageView);
+        board.add(stackPane, column, row);
     }
-
 
     @Override
     public void update(Observable o, Object arg) {
-        Pair<Integer, Integer> pair = (Pair<Integer, Integer>)arg;
-        // link between Fx and algorithm thread
+        pair = (Pair<Integer, Integer>)arg;
+
+        Platform.runLater(() -> {
+            board.getChildren().remove(stackPane);
+            setKnight(board, pair.getFirst() +1, pair.getSecond());
+        });
     }
 }

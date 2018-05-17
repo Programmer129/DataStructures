@@ -42,7 +42,7 @@ public class SudokuVizualization extends Application implements Observer {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        });
+        }, "algorithm thread");
 
         try {
             this.textFields = this.gridToField();
