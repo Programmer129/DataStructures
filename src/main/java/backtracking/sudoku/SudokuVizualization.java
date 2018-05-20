@@ -29,7 +29,7 @@ public class SudokuVizualization extends Application implements Observer {
     private TextField [][] textFields = new TextField[9][9];
     private int [][] grid = new int[9][9];
 
-    private static final String PATH = "/home/levani/IdeaProjects/dataStructures/src/main/resources/sudoku.txt";
+    private static final String PATH = "C:\\Users\\avtod\\Desktop\\dataStructures\\src\\main\\resources\\sudoku.txt";
 
     @Override
     public void start(Stage primaryStage)  {

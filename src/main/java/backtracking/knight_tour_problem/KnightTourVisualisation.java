@@ -21,7 +21,7 @@ import java.util.Observer;
 
 public class KnightTourVisualisation extends Application implements Observer {
 
-    private static final String PATH = "/home/levani/IdeaProjects/dataStructures/src/main/resources/knight.png";
+    private static final String PATH = "C:\\Users\\avtod\\Desktop\\dataStructures\\src\\main\\resources\\knight.png";
 
     private GridPane board;
     private Pair<Integer, Integer> pair;
