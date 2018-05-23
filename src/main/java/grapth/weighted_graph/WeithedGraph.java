@@ -44,7 +44,6 @@ public class WeithedGraph<T extends Number,E extends Number>{
     // graph is undirect
     public void addEdge(T a, T b, E w){
         this.graph.get(a.intValue()).add(new Pair<>(b,w));
-        this.graph.get(b.intValue()).add(new Pair<>(a,w));
     }
 
     public void printGraph(){

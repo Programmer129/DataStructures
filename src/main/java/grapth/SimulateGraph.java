@@ -16,10 +16,10 @@ public class SimulateGraph {
 
         Random random = new Random();
 
-        for(int i = 0; i < 10000; i++){
-            int a = random.nextInt(1000) + 1;
-            int b = random.nextInt(1000) + 1;
-            int w = random.nextInt(20000)+1;
+        for(int i = 0; i < 1000000; i++){
+            int a = random.nextInt(5000) + 1;
+            int b = random.nextInt(5000) + 1;
+            int w = random.nextInt(200000)+1;
             if(a != b){
                 if(a > b){
                     int tmp = a^b;

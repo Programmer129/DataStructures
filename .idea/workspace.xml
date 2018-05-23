@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e49c156-3319-4f75-8da0-e2eee03c3238" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/grapth/network_flow/FordFulkerson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourProblem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourVisualisation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourVisualisation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuVizualization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuVizualization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backtracking/knight_tour_problem/KnightTourVisualisation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backtracking/knight_tour_problem/KnightTourVisualisation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backtracking/sudoku/SudokuVizualization.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backtracking/sudoku/SudokuVizualization.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grapth/SimulateGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grapth/SimulateGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/WeithedGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/WeithedGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/sssp/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/sssp/Dijkstra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="KnightTourProblem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourProblem.java">
+      <file leaf-file-name="FordFulkerson.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/grapth/network_flow/FordFulkerson.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="65" column="5" lean-forward="true" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+            <state relative-caret-position="225">
+              <caret line="15" column="77" lean-forward="true" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,14 +32,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KnightTourVisualisation.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourVisualisation.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="132" column="48" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="48" />
+            <state relative-caret-position="240">
+              <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimulateGraph.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/grapth/SimulateGraph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -71,6 +81,7 @@
       <find>grid</find>
       <find>addO</find>
       <find>-&gt;</find>
+      <find>step</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -84,7 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/TrieNodeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/strings/TrieNode.java" />
         <option value="$PROJECT_DIR$/src/test/java/BinarySearchTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/substring_search_tests/KnuthMorrisPrathTest.java" />
@@ -110,10 +120,7 @@
         <option value="$PROJECT_DIR$/src/main/java/grapth/AdjacentList.java" />
         <option value="$PROJECT_DIR$/src/main/java/linked_list/LinkedList.java" />
         <option value="$PROJECT_DIR$/src/main/java/linked_list/LinkedListIterator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/grapth/SimulateGraph.java" />
-        <option value="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/sssp/Dijkstra.java" />
         <option value="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/minimum_spaning_tree/Kruskal.java" />
-        <option value="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/WeithedGraph.java" />
         <option value="$PROJECT_DIR$/src/main/java/grapth/traversal_applications/StronglyConnectedComponents.java" />
         <option value="$PROJECT_DIR$/src/main/java/union_find/UnionFind.java" />
         <option value="$PROJECT_DIR$/src/main/java/grapth/informed_search/StateNode.java" />
@@ -130,11 +137,15 @@
         <option value="$PROJECT_DIR$/src/main/java/backtracking/KnightTourProblem.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/Mapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/ChessBoard.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuSolver.java" />
         <option value="$PROJECT_DIR$/src/main/java/backtracking/sudoku/SudokuVizualization.java" />
-        <option value="$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourProblem.java" />
         <option value="$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourVisualisation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourProblem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/sssp/Dijkstra.java" />
+        <option value="$PROJECT_DIR$/src/main/java/grapth/weighted_graph/WeithedGraph.java" />
+        <option value="$PROJECT_DIR$/src/main/java/grapth/network_flow/FordFulkerson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/grapth/SimulateGraph.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
       </list>
     </option>
   </component>
@@ -187,7 +198,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -219,7 +229,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="backtracking" type="462c0819:PsiDirectoryNode" />
+              <item name="grapth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
@@ -227,8 +237,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="backtracking" type="462c0819:PsiDirectoryNode" />
-              <item name="knight_tour_problem" type="462c0819:PsiDirectoryNode" />
+              <item name="grapth" type="462c0819:PsiDirectoryNode" />
+              <item name="graph_tracersals" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
@@ -236,8 +246,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="backtracking" type="462c0819:PsiDirectoryNode" />
-              <item name="sudoku" type="462c0819:PsiDirectoryNode" />
+              <item name="grapth" type="462c0819:PsiDirectoryNode" />
+              <item name="weighted_graph" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
@@ -245,21 +255,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dataStructures" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dataStructures" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="grapth" type="462c0819:PsiDirectoryNode" />
+              <item name="weighted_graph" type="462c0819:PsiDirectoryNode" />
+              <item name="sssp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -289,7 +295,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.KnightTourVisualisation">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -381,9 +387,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.KnightTourVisualisation" />
         <item itemvalue="Application.SudokuVizualization" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -418,7 +424,9 @@
       <workItem from="1526478214443" duration="105000" />
       <workItem from="1526478357673" duration="2279000" />
       <workItem from="1526484984246" duration="8490000" />
-      <workItem from="1526583615398" duration="4469000" />
+      <workItem from="1526583615398" duration="5360000" />
+      <workItem from="1526625162569" duration="13000" />
+      <workItem from="1527105017868" duration="6543000" />
     </task>
     <servers />
   </component>
@@ -455,7 +463,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194074000" />
+    <option name="totallyTimeSpent" value="201521000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -474,6 +482,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="right" id="Mongo Explorer" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
       <window_info anchor="bottom" id="Docker" order="11" />
@@ -487,11 +496,11 @@
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34452555" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.329927" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34452555" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Run with VisualVM" order="12" weight="0.329927" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23572475" />
+      <window_info anchor="bottom" id="Run with VisualVM" order="12" weight="0.329927" />
       <window_info anchor="right" id="SciView" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -538,11 +547,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="26" />
+      <option name="time" value="27" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/util/List.java" />
     <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/util/Objects.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/tree/BinarySearchTree.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -565,13 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/graph_tracersals/DepthFirstSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="70" column="32" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tree/RadBlackTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -579,36 +580,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/AdjacentMatrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/util/LinkedList.java" />
     <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/util/Vector.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/AdjacentList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/graph_tracersals/BreadthFirstSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/lang/Iterable.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/linked_list/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -629,39 +602,11 @@
     <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/lang/reflect/Method.java" />
     <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/util/PriorityQueue.java" />
     <entry file="jar:///opt/jdk1.8.0_161/src.zip!/java/lang/Integer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/SimulateGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/grapth/searching/eight_puzzle.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/traversal_applications/StronglyConnectedComponents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/weighted_graph/WeithedGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/grapth/weighted_graph/minimum_spaning_tree/Kruskal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/weighted_graph/sssp/Dijkstra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -676,13 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/informed_search/EightPuzzleBfs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -790,16 +728,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="85" column="59" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourProblem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="5" lean-forward="true" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+        <state relative-caret-position="180">
+          <caret line="12" column="51" lean-forward="true" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -808,8 +743,114 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/backtracking/knight_tour_problem/KnightTourVisualisation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
+        <state relative-caret-position="476">
           <caret line="132" column="48" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataStructures.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/AdjacentMatrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/AdjacentList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/traversal_applications/StronglyConnectedComponents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/informed_search/EightPuzzleBfs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-480">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/graph_tracersals/DepthFirstSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="55" lean-forward="true" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/weighted_graph/sssp/Dijkstra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#225#255#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/graph_tracersals/BreadthFirstSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-259">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/weighted_graph/WeithedGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#1295#1296#0" expanded="true" />
+            <element signature="e#1360#1361#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/network_flow/FordFulkerson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="77" lean-forward="true" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/grapth/SimulateGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
