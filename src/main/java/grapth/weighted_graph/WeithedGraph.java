@@ -3,8 +3,10 @@ package grapth.weighted_graph;
 import grapth.Pair;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @SuppressWarnings("unchecked")
 public class WeithedGraph<T extends Number,E extends Number>{
@@ -29,6 +31,17 @@ public class WeithedGraph<T extends Number,E extends Number>{
         return graph;
     }
 
+    public void setGraph(WeithedGraph<T,E> weithedGraph) {
+        this.graph.clear();
+        for (LinkedList<Pair<T, E>> pairs : weithedGraph.getGraph()) {
+            LinkedList<Pair<T,E>> list = new LinkedList<>();
+            for (Pair<T, E> pair : pairs) {
+                list.add(new Pair<>(pair.getFirst(), pair.getSecond()));
+            }
+            addList(list);
+        }
+    }
+
     public WeithedGraph<T,E> reverseGraph() {
         WeithedGraph<T,E> rGraph = WeithedGraph.getInstance();
         rGraph.setInitialSize(this.graph.size());
@@ -44,6 +57,10 @@ public class WeithedGraph<T extends Number,E extends Number>{
     // graph is undirect
     public void addEdge(T a, T b, E w){
         this.graph.get(a.intValue()).add(new Pair<>(b,w));
+    }
+
+    private void addList(LinkedList<Pair<T,E>> linkedList) {
+        this.graph.add(linkedList);
     }
 
     public void printGraph(){
