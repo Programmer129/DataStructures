@@ -1,6 +1,6 @@
 package grapth.weighted_graph.sssp;
 
-import grapth.Constants;
+import common.Constants;
 import grapth.Pair;
 
 import java.util.ArrayList;
@@ -49,5 +49,4 @@ public final class Dijkstra<T extends Number, E extends Number> {
     public E shortestPathTo(T t){
         return this.distances.get(t.intValue());
     }
-
 }
